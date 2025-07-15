@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.measurement_create_response import MeasurementCreateResponse
+from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse
 
 # TODO update the JSON string below
 json = "{}"

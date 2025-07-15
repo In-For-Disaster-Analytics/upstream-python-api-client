@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.py_taspi import PyTASPi
+from upstream_api_client.models.py_taspi import PyTASPi
 
 # TODO update the JSON string below
 json = "{}"

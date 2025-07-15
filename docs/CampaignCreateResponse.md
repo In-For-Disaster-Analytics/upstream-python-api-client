@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.campaign_create_response import CampaignCreateResponse
+from upstream_api_client.models.campaign_create_response import CampaignCreateResponse
 
 # TODO update the JSON string below
 json = "{}"

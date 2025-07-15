@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination
+from upstream_api_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.line_string import LineString
+from upstream_api_client.models.line_string import LineString
 
 # TODO update the JSON string below
 json = "{}"

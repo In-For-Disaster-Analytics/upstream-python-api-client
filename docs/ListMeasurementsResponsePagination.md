@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination
+from upstream_api_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination
 
 # TODO update the JSON string below
 json = "{}"

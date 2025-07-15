@@ -1,4 +1,4 @@
-# upstream_client.MeasurementsApi
+# upstream_api_client.MeasurementsApi
 
 All URIs are relative to */dev*
 
@@ -22,15 +22,15 @@ Create Measurement
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.measurement_create_response import MeasurementCreateResponse
-from upstream_client.models.measurement_in import MeasurementIn
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse
+from upstream_api_client.models.measurement_in import MeasurementIn
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -42,13 +42,13 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.MeasurementsApi(api_client)
+    api_instance = upstream_api_client.MeasurementsApi(api_client)
     station_id = 56 # int | 
     sensor_id = 56 # int | 
     campaign_id = 56 # int | 
-    measurement_in = upstream_client.MeasurementIn() # MeasurementIn | 
+    measurement_in = upstream_api_client.MeasurementIn() # MeasurementIn | 
 
     try:
         # Create Measurement
@@ -103,13 +103,13 @@ Delete Sensor Measurements
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -121,9 +121,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.MeasurementsApi(api_client)
+    api_instance = upstream_api_client.MeasurementsApi(api_client)
     campaign_id = 56 # int | 
     station_id = 56 # int | 
     sensor_id = 56 # int | 
@@ -179,22 +179,22 @@ Get sensor measurements with confidence intervals for visualization.
 
 
 ```python
-import upstream_client
-from upstream_client.models.aggregated_measurement import AggregatedMeasurement
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.aggregated_measurement import AggregatedMeasurement
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.MeasurementsApi(api_client)
+    api_instance = upstream_api_client.MeasurementsApi(api_client)
     campaign_id = 56 # int | 
     station_id = 56 # int | 
     sensor_id = 56 # int | 
@@ -263,14 +263,14 @@ Get Sensor Measurements
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -282,9 +282,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.MeasurementsApi(api_client)
+    api_instance = upstream_api_client.MeasurementsApi(api_client)
     campaign_id = 56 # int | 
     station_id = 56 # int | 
     sensor_id = 56 # int | 
@@ -355,15 +355,15 @@ Partial Update Sensor
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.measurement_create_response import MeasurementCreateResponse
-from upstream_client.models.measurement_update import MeasurementUpdate
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse
+from upstream_api_client.models.measurement_update import MeasurementUpdate
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -375,14 +375,14 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.MeasurementsApi(api_client)
+    api_instance = upstream_api_client.MeasurementsApi(api_client)
     campaign_id = 56 # int | 
     station_id = 56 # int | 
     sensor_id = 56 # int | 
     measurement_id = 56 # int | 
-    measurement_update = upstream_client.MeasurementUpdate() # MeasurementUpdate | 
+    measurement_update = upstream_api_client.MeasurementUpdate() # MeasurementUpdate | 
 
     try:
         # Partial Update Sensor
@@ -438,15 +438,15 @@ Update Sensor
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.measurement_create_response import MeasurementCreateResponse
-from upstream_client.models.measurement_update import MeasurementUpdate
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse
+from upstream_api_client.models.measurement_update import MeasurementUpdate
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -458,14 +458,14 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.MeasurementsApi(api_client)
+    api_instance = upstream_api_client.MeasurementsApi(api_client)
     measurement_id = 56 # int | 
     station_id = 56 # int | 
     sensor_id = 56 # int | 
     campaign_id = 56 # int | 
-    measurement_update = upstream_client.MeasurementUpdate() # MeasurementUpdate | 
+    measurement_update = upstream_api_client.MeasurementUpdate() # MeasurementUpdate | 
 
     try:
         # Update Sensor

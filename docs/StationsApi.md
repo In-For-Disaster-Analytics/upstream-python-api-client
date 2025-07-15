@@ -1,4 +1,4 @@
-# upstream_client.StationsApi
+# upstream_api_client.StationsApi
 
 All URIs are relative to */dev*
 
@@ -22,15 +22,15 @@ Create Station
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.station_create import StationCreate
-from upstream_client.models.station_create_response import StationCreateResponse
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.station_create import StationCreate
+from upstream_api_client.models.station_create_response import StationCreateResponse
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -42,11 +42,11 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.StationsApi(api_client)
+    api_instance = upstream_api_client.StationsApi(api_client)
     campaign_id = 56 # int | 
-    station_create = upstream_client.StationCreate() # StationCreate | 
+    station_create = upstream_api_client.StationCreate() # StationCreate | 
 
     try:
         # Create Station
@@ -99,13 +99,13 @@ Delete Sensor
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -117,9 +117,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.StationsApi(api_client)
+    api_instance = upstream_api_client.StationsApi(api_client)
     campaign_id = 56 # int | 
 
     try:
@@ -170,14 +170,14 @@ Get Station
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.get_station_response import GetStationResponse
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.get_station_response import GetStationResponse
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -189,9 +189,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.StationsApi(api_client)
+    api_instance = upstream_api_client.StationsApi(api_client)
     station_id = 56 # int | 
     campaign_id = 56 # int | 
 
@@ -246,14 +246,14 @@ List Stations
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.list_stations_response_pagination import ListStationsResponsePagination
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.list_stations_response_pagination import ListStationsResponsePagination
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -265,9 +265,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.StationsApi(api_client)
+    api_instance = upstream_api_client.StationsApi(api_client)
     campaign_id = 56 # int | 
     page = 1 # int |  (optional) (default to 1)
     limit = 20 # int |  (optional) (default to 20)
@@ -324,15 +324,15 @@ Partial Update Station
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.station_create_response import StationCreateResponse
-from upstream_client.models.station_update import StationUpdate
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.station_create_response import StationCreateResponse
+from upstream_api_client.models.station_update import StationUpdate
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -344,12 +344,12 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.StationsApi(api_client)
+    api_instance = upstream_api_client.StationsApi(api_client)
     campaign_id = 56 # int | 
     station_id = 56 # int | 
-    station_update = upstream_client.StationUpdate() # StationUpdate | 
+    station_update = upstream_api_client.StationUpdate() # StationUpdate | 
 
     try:
         # Partial Update Station
@@ -403,15 +403,15 @@ Update Station
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.station_create_response import StationCreateResponse
-from upstream_client.models.station_update import StationUpdate
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.station_create_response import StationCreateResponse
+from upstream_api_client.models.station_update import StationUpdate
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -423,12 +423,12 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.StationsApi(api_client)
+    api_instance = upstream_api_client.StationsApi(api_client)
     station_id = 56 # int | 
     campaign_id = 56 # int | 
-    station_update = upstream_client.StationUpdate() # StationUpdate | 
+    station_update = upstream_api_client.StationUpdate() # StationUpdate | 
 
     try:
         # Update Station

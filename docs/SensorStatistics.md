@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.sensor_statistics import SensorStatistics
+from upstream_api_client.models.sensor_statistics import SensorStatistics
 
 # TODO update the JSON string below
 json = "{}"

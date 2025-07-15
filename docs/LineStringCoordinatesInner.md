@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.line_string_coordinates_inner import LineStringCoordinatesInner
+from upstream_api_client.models.line_string_coordinates_inner import LineStringCoordinatesInner
 
 # TODO update the JSON string below
 json = "{}"

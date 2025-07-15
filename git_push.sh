@@ -19,7 +19,7 @@ if [ "$git_user_id" = "" ]; then
 fi
 
 if [ "$git_repo_id" = "" ]; then
-    git_repo_id="upstream-client"
+    git_repo_id="upstream-python-api-client"
     echo "[INFO] No command line input provided. Set \$git_repo_id to $git_repo_id"
 fi
 

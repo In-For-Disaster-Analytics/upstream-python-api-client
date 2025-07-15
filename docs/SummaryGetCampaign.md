@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.summary_get_campaign import SummaryGetCampaign
+from upstream_api_client.models.summary_get_campaign import SummaryGetCampaign
 
 # TODO update the JSON string below
 json = "{}"

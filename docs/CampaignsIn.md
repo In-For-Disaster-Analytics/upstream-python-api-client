@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.campaigns_in import CampaignsIn
+from upstream_api_client.models.campaigns_in import CampaignsIn
 
 # TODO update the JSON string below
 json = "{}"

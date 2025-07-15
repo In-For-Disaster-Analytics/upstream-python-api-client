@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.bbox import Bbox
+from upstream_api_client.models.bbox import Bbox
 
 # TODO update the JSON string below
 json = "{}"

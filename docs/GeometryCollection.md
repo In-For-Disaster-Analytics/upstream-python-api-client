@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.geometry_collection import GeometryCollection
+from upstream_api_client.models.geometry_collection import GeometryCollection
 
 # TODO update the JSON string below
 json = "{}"

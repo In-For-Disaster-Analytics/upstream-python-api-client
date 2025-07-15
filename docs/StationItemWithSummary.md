@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.station_item_with_summary import StationItemWithSummary
+from upstream_api_client.models.station_item_with_summary import StationItemWithSummary
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# upstream_client.CampaignsApi
+# upstream_api_client.CampaignsApi
 
 All URIs are relative to */dev*
 
@@ -22,15 +22,15 @@ Create Campaign
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.campaign_create_response import CampaignCreateResponse
-from upstream_client.models.campaigns_in import CampaignsIn
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.campaign_create_response import CampaignCreateResponse
+from upstream_api_client.models.campaigns_in import CampaignsIn
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -42,10 +42,10 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.CampaignsApi(api_client)
-    campaigns_in = upstream_client.CampaignsIn() # CampaignsIn | 
+    api_instance = upstream_api_client.CampaignsApi(api_client)
+    campaigns_in = upstream_api_client.CampaignsIn() # CampaignsIn | 
 
     try:
         # Create Campaign
@@ -97,13 +97,13 @@ Delete Sensor
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -115,9 +115,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.CampaignsApi(api_client)
+    api_instance = upstream_api_client.CampaignsApi(api_client)
     campaign_id = 56 # int | 
 
     try:
@@ -168,14 +168,14 @@ Get Campaign
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.get_campaign_response import GetCampaignResponse
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.get_campaign_response import GetCampaignResponse
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -187,9 +187,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.CampaignsApi(api_client)
+    api_instance = upstream_api_client.CampaignsApi(api_client)
     campaign_id = 56 # int | 
 
     try:
@@ -242,14 +242,14 @@ List Campaigns
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -261,9 +261,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.CampaignsApi(api_client)
+    api_instance = upstream_api_client.CampaignsApi(api_client)
     page = 1 # int |  (optional) (default to 1)
     limit = 20 # int |  (optional) (default to 20)
     bbox = 'bbox_example' # str | Bounding box of the campaign west,south,east,north (optional)
@@ -326,15 +326,15 @@ Partial Update Campaign
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.campaign_create_response import CampaignCreateResponse
-from upstream_client.models.campaign_update import CampaignUpdate
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.campaign_create_response import CampaignCreateResponse
+from upstream_api_client.models.campaign_update import CampaignUpdate
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -346,11 +346,11 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.CampaignsApi(api_client)
+    api_instance = upstream_api_client.CampaignsApi(api_client)
     campaign_id = 56 # int | 
-    campaign_update = upstream_client.CampaignUpdate() # CampaignUpdate | 
+    campaign_update = upstream_api_client.CampaignUpdate() # CampaignUpdate | 
 
     try:
         # Partial Update Campaign
@@ -403,15 +403,15 @@ Update Campaign
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.campaign_create_response import CampaignCreateResponse
-from upstream_client.models.campaigns_in import CampaignsIn
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.campaign_create_response import CampaignCreateResponse
+from upstream_api_client.models.campaigns_in import CampaignsIn
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -423,11 +423,11 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.CampaignsApi(api_client)
+    api_instance = upstream_api_client.CampaignsApi(api_client)
     campaign_id = 56 # int | 
-    campaigns_in = upstream_client.CampaignsIn() # CampaignsIn | 
+    campaigns_in = upstream_api_client.CampaignsIn() # CampaignsIn | 
 
     try:
         # Update Campaign

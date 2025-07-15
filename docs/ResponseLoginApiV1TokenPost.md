@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost
+from upstream_api_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost
 
 # TODO update the JSON string below
 json = "{}"

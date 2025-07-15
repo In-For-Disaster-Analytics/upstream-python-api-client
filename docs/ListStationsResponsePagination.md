@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.list_stations_response_pagination import ListStationsResponsePagination
+from upstream_api_client.models.list_stations_response_pagination import ListStationsResponsePagination
 
 # TODO update the JSON string below
 json = "{}"

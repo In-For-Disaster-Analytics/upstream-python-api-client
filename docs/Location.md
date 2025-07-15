@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.location import Location
+from upstream_api_client.models.location import Location
 
 # TODO update the JSON string below
 json = "{}"

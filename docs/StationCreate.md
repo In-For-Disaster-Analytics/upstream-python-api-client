@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.station_create import StationCreate
+from upstream_api_client.models.station_create import StationCreate
 
 # TODO update the JSON string below
 json = "{}"

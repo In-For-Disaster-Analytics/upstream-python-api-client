@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.measurement_item import MeasurementItem
+from upstream_api_client.models.measurement_item import MeasurementItem
 
 # TODO update the JSON string below
 json = "{}"

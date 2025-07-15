@@ -1,4 +1,4 @@
-# upstream_client.ProjectsApi
+# upstream_api_client.ProjectsApi
 
 All URIs are relative to */dev*
 
@@ -17,22 +17,22 @@ Get Project Members For User
 
 
 ```python
-import upstream_client
-from upstream_client.models.py_tas_user import PyTASUser
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.py_tas_user import PyTASUser
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.ProjectsApi(api_client)
+    api_instance = upstream_api_client.ProjectsApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -85,14 +85,14 @@ Get Projects
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import upstream_client
-from upstream_client.models.py_tas_project import PyTASProject
-from upstream_client.rest import ApiException
+import upstream_api_client
+from upstream_api_client.models.py_tas_project import PyTASProject
+from upstream_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /dev
 # See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_client.Configuration(
+configuration = upstream_api_client.Configuration(
     host = "/dev"
 )
 
@@ -104,9 +104,9 @@ configuration = upstream_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with upstream_client.ApiClient(configuration) as api_client:
+with upstream_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = upstream_client.ProjectsApi(api_client)
+    api_instance = upstream_api_client.ProjectsApi(api_client)
 
     try:
         # Get Projects

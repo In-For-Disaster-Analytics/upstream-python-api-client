@@ -21,7 +21,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "upstream-client"
+NAME = "upstream-api-client"
 VERSION = "0.1.0"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
@@ -37,7 +37,7 @@ setup(
     description="Upstream Sensor Storage",
     author="Will Mobley",
     author_email="wmobley@tacc.utexas.edu",
-    url="https://github.com/In-For-Disaster-Analytics/upstream-client",
+    url="https://github.com/In-For-Disaster-Analytics/upstream-python-api-client",
     keywords=["OpenAPI", "OpenAPI-Generator", "Upstream Sensor Storage"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
@@ -46,5 +46,5 @@ setup(
     long_description="""\
     Sensor Storage for Upstream data
     """,  # noqa: E501
-    package_data={"upstream_client": ["py.typed"]},
+    package_data={"upstream_api_client": ["py.typed"]},
 )

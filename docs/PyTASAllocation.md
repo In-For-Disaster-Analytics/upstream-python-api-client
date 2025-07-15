@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.py_tas_allocation import PyTASAllocation
+from upstream_api_client.models.py_tas_allocation import PyTASAllocation
 
 # TODO update the JSON string below
 json = "{}"

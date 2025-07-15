@@ -1,5 +1,5 @@
 [project]
-name = "upstream_client"
+name = "upstream_api_client"
 version = "0.1.0"
 description = "Upstream Sensor Storage"
 authors = [
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/In-For-Disaster-Analytics/upstream-client"
+Repository = "https://github.com/In-For-Disaster-Analytics/upstream-python-api-client"
 
 [tool.poetry]
 requires-poetry = ">=2.0"
@@ -41,7 +41,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "upstream_client",
+  "upstream_api_client",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -79,7 +79,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "upstream_client.configuration",
+  "upstream_api_client.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

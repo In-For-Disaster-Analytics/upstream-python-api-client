@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from upstream_client.models.http_validation_error import HTTPValidationError
+from upstream_api_client.models.http_validation_error import HTTPValidationError
 
 # TODO update the JSON string below
 json = "{}"
