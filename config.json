@@ -1,0 +1,14 @@
+{
+  "projectName": "upstream-client",
+  "packageName": "upstream_client",
+  "packageVersion": "0.1.0",
+  "packageUrl": "https://github.com/In-For-Disaster-Analytics/upstream-client",
+  "packageAuthor": "Upstream Python Client",
+  "packageAuthorEmail": "info@upstream-project.org",
+  "packageLicense": "MIT",
+  "packageLicenseUrl": "https://github.com/In-For-Disaster-Analytics/upstream-client/blob/main/LICENSE",
+  "packageDescription": "Upstream Client",
+  "packageKeywords": ["upstream", "client", "python"],
+  "gitUserId": "In-For-Disaster-Analytics",
+  "gitRepoId": "upstream-client"
+}
