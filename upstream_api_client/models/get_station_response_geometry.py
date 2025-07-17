@@ -17,7 +17,7 @@ from __future__ import annotations
 import json
 import pprint
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
-from typing import Any, Dict, List, Optional
+from typing import Any, List, Optional
 from upstream_api_client.models.geometry_collection import GeometryCollection
 from upstream_api_client.models.line_string import LineString
 from upstream_api_client.models.multi_line_string import MultiLineString
@@ -29,11 +29,11 @@ from pydantic import StrictStr, Field
 from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self
 
-GETCAMPAIGNRESPONSEGEOMETRY_ONE_OF_SCHEMAS = ["GeometryCollection", "LineString", "MultiLineString", "MultiPoint", "MultiPolygon", "Point", "Polygon", "object"]
+GETSTATIONRESPONSEGEOMETRY_ONE_OF_SCHEMAS = ["GeometryCollection", "LineString", "MultiLineString", "MultiPoint", "MultiPolygon", "Point", "Polygon"]
 
-class GetCampaignResponseGeometry(BaseModel):
+class GetStationResponseGeometry(BaseModel):
     """
-    GetCampaignResponseGeometry
+    GetStationResponseGeometry
     """
     # data type: Point
     oneof_schema_1_validator: Optional[Point] = None
@@ -49,10 +49,8 @@ class GetCampaignResponseGeometry(BaseModel):
     oneof_schema_6_validator: Optional[MultiPolygon] = None
     # data type: GeometryCollection
     oneof_schema_7_validator: Optional[GeometryCollection] = None
-    # data type: object
-    oneof_schema_8_validator: Optional[Dict[str, Any]] = None
-    actual_instance: Optional[Union[GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon, object]] = None
-    one_of_schemas: Set[str] = { "GeometryCollection", "LineString", "MultiLineString", "MultiPoint", "MultiPolygon", "Point", "Polygon", "object" }
+    actual_instance: Optional[Union[GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon]] = None
+    one_of_schemas: Set[str] = { "GeometryCollection", "LineString", "MultiLineString", "MultiPoint", "MultiPolygon", "Point", "Polygon" }
 
     model_config = ConfigDict(
         validate_assignment=True,
@@ -78,7 +76,7 @@ class GetCampaignResponseGeometry(BaseModel):
         if v is None:
             return v
 
-        instance = GetCampaignResponseGeometry.model_construct()
+        instance = GetStationResponseGeometry.model_construct()
         error_messages = []
         match = 0
         # validate data type: Point
@@ -116,18 +114,12 @@ class GetCampaignResponseGeometry(BaseModel):
             error_messages.append(f"Error! Input type `{type(v)}` is not `GeometryCollection`")
         else:
             match += 1
-        # validate data type: object
-        try:
-            instance.oneof_schema_8_validator = v
-            match += 1
-        except (ValidationError, ValueError) as e:
-            error_messages.append(str(e))
         if match > 1:
             # more than 1 match
-            raise ValueError("Multiple matches found when setting `actual_instance` in GetCampaignResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon, object. Details: " + ", ".join(error_messages))
+            raise ValueError("Multiple matches found when setting `actual_instance` in GetStationResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon. Details: " + ", ".join(error_messages))
         elif match == 0:
             # no match
-            raise ValueError("No match found when setting `actual_instance` in GetCampaignResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon, object. Details: " + ", ".join(error_messages))
+            raise ValueError("No match found when setting `actual_instance` in GetStationResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon. Details: " + ", ".join(error_messages))
         else:
             return v
 
@@ -187,22 +179,13 @@ class GetCampaignResponseGeometry(BaseModel):
             match += 1
         except (ValidationError, ValueError) as e:
             error_messages.append(str(e))
-        # deserialize data into object
-        try:
-            # validation
-            instance.oneof_schema_8_validator = json.loads(json_str)
-            # assign value to actual_instance
-            instance.actual_instance = instance.oneof_schema_8_validator
-            match += 1
-        except (ValidationError, ValueError) as e:
-            error_messages.append(str(e))
 
         if match > 1:
             # more than 1 match
-            raise ValueError("Multiple matches found when deserializing the JSON string into GetCampaignResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon, object. Details: " + ", ".join(error_messages))
+            raise ValueError("Multiple matches found when deserializing the JSON string into GetStationResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon. Details: " + ", ".join(error_messages))
         elif match == 0:
             # no match
-            raise ValueError("No match found when deserializing the JSON string into GetCampaignResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon, object. Details: " + ", ".join(error_messages))
+            raise ValueError("No match found when deserializing the JSON string into GetStationResponseGeometry with oneOf schemas: GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon. Details: " + ", ".join(error_messages))
         else:
             return instance
 
@@ -216,7 +199,7 @@ class GetCampaignResponseGeometry(BaseModel):
         else:
             return json.dumps(self.actual_instance)
 
-    def to_dict(self) -> Optional[Union[Dict[str, Any], GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon, object]]:
+    def to_dict(self) -> Optional[Union[Dict[str, Any], GeometryCollection, LineString, MultiLineString, MultiPoint, MultiPolygon, Point, Polygon]]:
         """Returns the dict representation of the actual instance"""
         if self.actual_instance is None:
             return None

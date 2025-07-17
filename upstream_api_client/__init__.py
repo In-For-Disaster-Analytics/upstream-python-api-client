@@ -45,7 +45,6 @@ __all__ = [
     "GeometryCollection",
     "GeometryCollectionGeometriesInner",
     "GetCampaignResponse",
-    "GetCampaignResponseGeometry",
     "GetSensorResponse",
     "GetStationResponse",
     "HTTPValidationError",
@@ -120,7 +119,6 @@ from upstream_api_client.models.coordinates import Coordinates as Coordinates
 from upstream_api_client.models.geometry_collection import GeometryCollection as GeometryCollection
 from upstream_api_client.models.geometry_collection_geometries_inner import GeometryCollectionGeometriesInner as GeometryCollectionGeometriesInner
 from upstream_api_client.models.get_campaign_response import GetCampaignResponse as GetCampaignResponse
-from upstream_api_client.models.get_campaign_response_geometry import GetCampaignResponseGeometry as GetCampaignResponseGeometry
 from upstream_api_client.models.get_sensor_response import GetSensorResponse as GetSensorResponse
 from upstream_api_client.models.get_station_response import GetStationResponse as GetStationResponse
 from upstream_api_client.models.http_validation_error import HTTPValidationError as HTTPValidationError

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **contact_email** | **str** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **start_date** | **datetime** |  | [optional] 
-**geometry** | [**GetCampaignResponseGeometry**](GetCampaignResponseGeometry.md) |  | [optional] 
+**geometry** | **object** |  | [optional] 
 **sensors** | [**List[SensorItem]**](SensorItem.md) |  | [optional] 
 
 ## Example

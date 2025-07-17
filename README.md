@@ -131,7 +131,6 @@ Class | Method | HTTP request | Description
  - [GeometryCollection](docs/GeometryCollection.md)
  - [GeometryCollectionGeometriesInner](docs/GeometryCollectionGeometriesInner.md)
  - [GetCampaignResponse](docs/GetCampaignResponse.md)
- - [GetCampaignResponseGeometry](docs/GetCampaignResponseGeometry.md)
  - [GetSensorResponse](docs/GetSensorResponse.md)
  - [GetStationResponse](docs/GetStationResponse.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)

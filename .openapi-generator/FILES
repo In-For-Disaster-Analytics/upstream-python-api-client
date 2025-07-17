@@ -14,7 +14,6 @@ docs/Coordinates.md
 docs/GeometryCollection.md
 docs/GeometryCollectionGeometriesInner.md
 docs/GetCampaignResponse.md
-docs/GetCampaignResponseGeometry.md
 docs/GetSensorResponse.md
 docs/GetStationResponse.md
 docs/HTTPValidationError.md
@@ -94,7 +93,6 @@ upstream_api_client/models/coordinates.py
 upstream_api_client/models/geometry_collection.py
 upstream_api_client/models/geometry_collection_geometries_inner.py
 upstream_api_client/models/get_campaign_response.py
-upstream_api_client/models/get_campaign_response_geometry.py
 upstream_api_client/models/get_sensor_response.py
 upstream_api_client/models/get_station_response.py
 upstream_api_client/models/http_validation_error.py

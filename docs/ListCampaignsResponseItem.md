@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **end_date** | **datetime** |  | [optional] 
 **allocation** | **str** |  | [optional] 
 **summary** | [**SummaryListCampaigns**](SummaryListCampaigns.md) |  | 
-**geometry** | [**GetCampaignResponseGeometry**](GetCampaignResponseGeometry.md) |  | [optional] 
+**geometry** | **object** |  | [optional] 
 
 ## Example
 
