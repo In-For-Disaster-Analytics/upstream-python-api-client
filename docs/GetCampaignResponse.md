@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **allocation** | **str** |  | 
 **location** | [**Location**](Location.md) |  | [optional] 
 **summary** | [**SummaryGetCampaign**](SummaryGetCampaign.md) |  | 
-**geometry** | **object** |  | [optional] 
+**geometry** | [**AnyOf**](AnyOf.md) |  | [optional] 
 **stations** | [**List[StationsListResponseItem]**](StationsListResponseItem.md) |  | [optional] [default to []]
 
 ## Example

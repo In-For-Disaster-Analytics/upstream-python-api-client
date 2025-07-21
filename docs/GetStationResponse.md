@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **contact_email** | **str** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **start_date** | **datetime** |  | [optional] 
-**geometry** | **object** |  | [optional] 
+**geometry** | [**AnyOf**](AnyOf.md) |  | [optional] 
 **sensors** | [**List[SensorItem]**](SensorItem.md) |  | [optional] 
 
 ## Example

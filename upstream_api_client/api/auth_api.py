@@ -18,9 +18,8 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr, field_validator
-from typing import Optional
+from typing import Dict, Optional
 from typing_extensions import Annotated
-from upstream_api_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost
 
 from upstream_api_client.api_client import ApiClient, RequestSerialized
 from upstream_api_client.api_response import ApiResponse
@@ -61,7 +60,7 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ResponseLoginApiV1TokenPost:
+    ) -> Dict[str, Optional[str]]:
         """Login
 
 
@@ -113,7 +112,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ResponseLoginApiV1TokenPost",
+            '200': "Dict[str, Optional[str]]",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -148,7 +147,7 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ResponseLoginApiV1TokenPost]:
+    ) -> ApiResponse[Dict[str, Optional[str]]]:
         """Login
 
 
@@ -200,7 +199,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ResponseLoginApiV1TokenPost",
+            '200': "Dict[str, Optional[str]]",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -287,7 +286,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ResponseLoginApiV1TokenPost",
+            '200': "Dict[str, Optional[str]]",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(

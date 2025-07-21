@@ -36,7 +36,7 @@ class GetStationResponse(BaseModel):
     contact_email: Optional[StrictStr] = None
     active: Optional[StrictBool] = None
     start_date: Optional[datetime] = None
-    geometry: Optional[Dict[str, Any]] = None
+    geometry: Optional[Any] = None
     sensors: Optional[List[SensorItem]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "description", "contact_name", "contact_email", "active", "start_date", "geometry", "sensors"]
 
@@ -79,6 +79,9 @@ class GetStationResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of geometry
+        if self.geometry:
+            _dict['geometry'] = self.geometry.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in sensors (list)
         _items = []
         if self.sensors:
@@ -111,6 +114,11 @@ class GetStationResponse(BaseModel):
         if self.start_date is None and "start_date" in self.model_fields_set:
             _dict['start_date'] = None
 
+        # set to None if geometry (nullable) is None
+        # and model_fields_set contains the field
+        if self.geometry is None and "geometry" in self.model_fields_set:
+            _dict['geometry'] = None
+
         # set to None if sensors (nullable) is None
         # and model_fields_set contains the field
         if self.sensors is None and "sensors" in self.model_fields_set:
@@ -135,7 +143,7 @@ class GetStationResponse(BaseModel):
             "contact_email": obj.get("contact_email"),
             "active": obj.get("active"),
             "start_date": obj.get("start_date"),
-            "geometry": obj.get("geometry"),
+            "geometry": AnyOf.from_dict(obj["geometry"]) if obj.get("geometry") is not None else None,
             "sensors": [SensorItem.from_dict(_item) for _item in obj["sensors"]] if obj.get("sensors") is not None else None
         })
         return _obj

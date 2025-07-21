@@ -1,6 +1,6 @@
 # upstream_api_client.AuthApi
 
-All URIs are relative to */dev*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **login_api_v1_token_post**
-> ResponseLoginApiV1TokenPost login_api_v1_token_post(username, password, grant_type=grant_type, scope=scope, client_id=client_id, client_secret=client_secret)
+> Dict[str, Optional[str]] login_api_v1_token_post(username, password, grant_type=grant_type, scope=scope, client_id=client_id, client_secret=client_secret)
 
 Login
 
@@ -17,14 +17,13 @@ Login
 
 ```python
 import upstream_api_client
-from upstream_api_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 
@@ -64,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponseLoginApiV1TokenPost**](ResponseLoginApiV1TokenPost.md)
+**Dict[str, Optional[str]]**
 
 ### Authorization
 

@@ -51,6 +51,7 @@ __all__ = [
     "LineString",
     "LineStringCoordinatesInner",
     "ListCampaignsResponseItem",
+    "ListCampaignsResponseItemGeometry",
     "ListCampaignsResponsePagination",
     "ListMeasurementsResponsePagination",
     "ListSensorsResponsePagination",
@@ -69,7 +70,6 @@ __all__ = [
     "PyTASPi",
     "PyTASProject",
     "PyTASUser",
-    "ResponseLoginApiV1TokenPost",
     "SensorCreateResponse",
     "SensorItem",
     "SensorStatistics",
@@ -125,6 +125,7 @@ from upstream_api_client.models.http_validation_error import HTTPValidationError
 from upstream_api_client.models.line_string import LineString as LineString
 from upstream_api_client.models.line_string_coordinates_inner import LineStringCoordinatesInner as LineStringCoordinatesInner
 from upstream_api_client.models.list_campaigns_response_item import ListCampaignsResponseItem as ListCampaignsResponseItem
+from upstream_api_client.models.list_campaigns_response_item_geometry import ListCampaignsResponseItemGeometry as ListCampaignsResponseItemGeometry
 from upstream_api_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination as ListCampaignsResponsePagination
 from upstream_api_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination as ListMeasurementsResponsePagination
 from upstream_api_client.models.list_sensors_response_pagination import ListSensorsResponsePagination as ListSensorsResponsePagination
@@ -143,7 +144,6 @@ from upstream_api_client.models.py_tas_allocation import PyTASAllocation as PyTA
 from upstream_api_client.models.py_taspi import PyTASPi as PyTASPi
 from upstream_api_client.models.py_tas_project import PyTASProject as PyTASProject
 from upstream_api_client.models.py_tas_user import PyTASUser as PyTASUser
-from upstream_api_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost as ResponseLoginApiV1TokenPost
 from upstream_api_client.models.sensor_create_response import SensorCreateResponse as SensorCreateResponse
 from upstream_api_client.models.sensor_item import SensorItem as SensorItem
 from upstream_api_client.models.sensor_statistics import SensorStatistics as SensorStatistics

@@ -1,6 +1,6 @@
 # upstream_api_client.CampaignsApi
 
-All URIs are relative to */dev*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,10 +28,10 @@ from upstream_api_client.models.campaigns_in import CampaignsIn
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -101,10 +101,10 @@ import upstream_api_client
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -173,10 +173,10 @@ from upstream_api_client.models.get_campaign_response import GetCampaignResponse
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -247,10 +247,10 @@ from upstream_api_client.models.list_campaigns_response_pagination import ListCa
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -332,10 +332,10 @@ from upstream_api_client.models.campaign_update import CampaignUpdate
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -409,10 +409,10 @@ from upstream_api_client.models.campaigns_in import CampaignsIn
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters

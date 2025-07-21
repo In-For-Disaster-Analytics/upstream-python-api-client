@@ -55,10 +55,10 @@ import upstream_api_client
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 
@@ -86,7 +86,7 @@ with upstream_api_client.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to */dev*
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -113,6 +113,8 @@ Class | Method | HTTP request | Description
 *SensorsApi* | [**update_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_put**](docs/SensorsApi.md#update_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_put) | **PUT** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/{sensor_id} | Update Sensor
 *StationsApi* | [**create_station_api_v1_campaigns_campaign_id_stations_post**](docs/StationsApi.md#create_station_api_v1_campaigns_campaign_id_stations_post) | **POST** /api/v1/campaigns/{campaign_id}/stations | Create Station
 *StationsApi* | [**delete_sensor_api_v1_campaigns_campaign_id_stations_delete**](docs/StationsApi.md#delete_sensor_api_v1_campaigns_campaign_id_stations_delete) | **DELETE** /api/v1/campaigns/{campaign_id}/stations | Delete Sensor
+*StationsApi* | [**export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get**](docs/StationsApi.md#export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id}/measurements/export | Export Measurements Csv
+*StationsApi* | [**export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get**](docs/StationsApi.md#export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/export | Export Sensors Csv
 *StationsApi* | [**get_station_api_v1_campaigns_campaign_id_stations_station_id_get**](docs/StationsApi.md#get_station_api_v1_campaigns_campaign_id_stations_station_id_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id} | Get Station
 *StationsApi* | [**list_stations_api_v1_campaigns_campaign_id_stations_get**](docs/StationsApi.md#list_stations_api_v1_campaigns_campaign_id_stations_get) | **GET** /api/v1/campaigns/{campaign_id}/stations | List Stations
 *StationsApi* | [**partial_update_station_api_v1_campaigns_campaign_id_stations_station_id_patch**](docs/StationsApi.md#partial_update_station_api_v1_campaigns_campaign_id_stations_station_id_patch) | **PATCH** /api/v1/campaigns/{campaign_id}/stations/{station_id} | Partial Update Station
@@ -137,6 +139,7 @@ Class | Method | HTTP request | Description
  - [LineString](docs/LineString.md)
  - [LineStringCoordinatesInner](docs/LineStringCoordinatesInner.md)
  - [ListCampaignsResponseItem](docs/ListCampaignsResponseItem.md)
+ - [ListCampaignsResponseItemGeometry](docs/ListCampaignsResponseItemGeometry.md)
  - [ListCampaignsResponsePagination](docs/ListCampaignsResponsePagination.md)
  - [ListMeasurementsResponsePagination](docs/ListMeasurementsResponsePagination.md)
  - [ListSensorsResponsePagination](docs/ListSensorsResponsePagination.md)
@@ -155,7 +158,6 @@ Class | Method | HTTP request | Description
  - [PyTASPi](docs/PyTASPi.md)
  - [PyTASProject](docs/PyTASProject.md)
  - [PyTASUser](docs/PyTASUser.md)
- - [ResponseLoginApiV1TokenPost](docs/ResponseLoginApiV1TokenPost.md)
  - [SensorCreateResponse](docs/SensorCreateResponse.md)
  - [SensorItem](docs/SensorItem.md)
  - [SensorStatistics](docs/SensorStatistics.md)

@@ -1,6 +1,6 @@
 # upstream_api_client.UploadfileCsvApi
 
-All URIs are relative to */dev*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **post_sensor_and_measurement_api_v1_uploadfile_csv_campaign_campaign_id_station_station_id_sensor_post**
-> Dict[str, object] post_sensor_and_measurement_api_v1_uploadfile_csv_campaign_campaign_id_station_station_id_sensor_post(campaign_id, station_id, upload_file_sensors, upload_file_measurements)
+> object post_sensor_and_measurement_api_v1_uploadfile_csv_campaign_campaign_id_station_station_id_sensor_post(campaign_id, station_id, upload_file_sensors, upload_file_measurements)
 
 Post Sensor And Measurement
 
@@ -23,10 +23,10 @@ import upstream_api_client
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Dict[str, object]**
+**object**
 
 ### Authorization
 

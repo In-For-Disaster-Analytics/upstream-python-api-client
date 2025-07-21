@@ -1,6 +1,6 @@
 # upstream_api_client.SensorVariablesApi
 
-All URIs are relative to */dev*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,10 +21,10 @@ import upstream_api_client
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters

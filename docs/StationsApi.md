@@ -1,11 +1,13 @@
 # upstream_api_client.StationsApi
 
-All URIs are relative to */dev*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_station_api_v1_campaigns_campaign_id_stations_post**](StationsApi.md#create_station_api_v1_campaigns_campaign_id_stations_post) | **POST** /api/v1/campaigns/{campaign_id}/stations | Create Station
 [**delete_sensor_api_v1_campaigns_campaign_id_stations_delete**](StationsApi.md#delete_sensor_api_v1_campaigns_campaign_id_stations_delete) | **DELETE** /api/v1/campaigns/{campaign_id}/stations | Delete Sensor
+[**export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get**](StationsApi.md#export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id}/measurements/export | Export Measurements Csv
+[**export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get**](StationsApi.md#export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/export | Export Sensors Csv
 [**get_station_api_v1_campaigns_campaign_id_stations_station_id_get**](StationsApi.md#get_station_api_v1_campaigns_campaign_id_stations_station_id_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id} | Get Station
 [**list_stations_api_v1_campaigns_campaign_id_stations_get**](StationsApi.md#list_stations_api_v1_campaigns_campaign_id_stations_get) | **GET** /api/v1/campaigns/{campaign_id}/stations | List Stations
 [**partial_update_station_api_v1_campaigns_campaign_id_stations_station_id_patch**](StationsApi.md#partial_update_station_api_v1_campaigns_campaign_id_stations_station_id_patch) | **PATCH** /api/v1/campaigns/{campaign_id}/stations/{station_id} | Partial Update Station
@@ -28,10 +30,10 @@ from upstream_api_client.models.station_create_response import StationCreateResp
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -103,10 +105,10 @@ import upstream_api_client
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -160,6 +162,164 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get**
+> object export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get(campaign_id, station_id, start_date=start_date, end_date=end_date)
+
+Export Measurements Csv
+
+Export measurements for a station as CSV with streaming support.
+
+### Example
+
+* OAuth Authentication (OAuth2PasswordBearer):
+
+```python
+import upstream_api_client
+from upstream_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = upstream_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with upstream_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = upstream_api_client.StationsApi(api_client)
+    campaign_id = 56 # int | 
+    station_id = 56 # int | 
+    start_date = '2013-10-20T19:20:30+01:00' # datetime | Start date filter (optional)
+    end_date = '2013-10-20T19:20:30+01:00' # datetime | End date filter (optional)
+
+    try:
+        # Export Measurements Csv
+        api_response = api_instance.export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get(campaign_id, station_id, start_date=start_date, end_date=end_date)
+        print("The response of StationsApi->export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling StationsApi->export_measurements_csv_api_v1_campaigns_campaign_id_stations_station_id_measurements_export_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaign_id** | **int**|  | 
+ **station_id** | **int**|  | 
+ **start_date** | **datetime**| Start date filter | [optional] 
+ **end_date** | **datetime**| End date filter | [optional] 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get**
+> object export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get(campaign_id, station_id)
+
+Export Sensors Csv
+
+Export sensors for a station as CSV with streaming support.
+
+### Example
+
+* OAuth Authentication (OAuth2PasswordBearer):
+
+```python
+import upstream_api_client
+from upstream_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = upstream_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with upstream_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = upstream_api_client.StationsApi(api_client)
+    campaign_id = 56 # int | 
+    station_id = 56 # int | 
+
+    try:
+        # Export Sensors Csv
+        api_response = api_instance.export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get(campaign_id, station_id)
+        print("The response of StationsApi->export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling StationsApi->export_sensors_csv_api_v1_campaigns_campaign_id_stations_station_id_sensors_export_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaign_id** | **int**|  | 
+ **station_id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_station_api_v1_campaigns_campaign_id_stations_station_id_get**
 > GetStationResponse get_station_api_v1_campaigns_campaign_id_stations_station_id_get(station_id, campaign_id)
 
@@ -175,10 +335,10 @@ from upstream_api_client.models.get_station_response import GetStationResponse
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -251,10 +411,10 @@ from upstream_api_client.models.list_stations_response_pagination import ListSta
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -330,10 +490,10 @@ from upstream_api_client.models.station_update import StationUpdate
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -409,10 +569,10 @@ from upstream_api_client.models.station_update import StationUpdate
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /dev
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = upstream_api_client.Configuration(
-    host = "/dev"
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters

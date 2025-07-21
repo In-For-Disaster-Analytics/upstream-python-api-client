@@ -6,7 +6,6 @@
     "contact": { "name": "Will Mobley", "email": "wmobley@tacc.utexas.edu" },
     "version": "0.0.1"
   },
-  "servers": [{ "url": "/dev" }],
   "paths": {
     "/api/v1/token": {
       "post": {
@@ -29,12 +28,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "additionalProperties": { "type": "string" },
                   "type": "object",
-                  "title": "Response Login Api V1 Token Post",
-                  "properties": {
-                    "access_token": { "type": "string" },
-                    "token_type": { "type": "string" }
-                  }
+                  "title": "Response Login Api V1 Token Post"
                 }
               }
             }
@@ -563,6 +559,108 @@
                 }
               }
             }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/export": {
+      "get": {
+        "tags": ["stations"],
+        "summary": "Export Sensors Csv",
+        "description": "Export sensors for a station as CSV with streaming support.",
+        "operationId": "export_sensors_csv_api_v1_campaigns__campaign_id__stations__station_id__sensors_export_get",
+        "security": [{ "OAuth2PasswordBearer": [] }],
+        "parameters": [
+          {
+            "name": "campaign_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Campaign Id" }
+          },
+          {
+            "name": "station_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Station Id" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/campaigns/{campaign_id}/stations/{station_id}/measurements/export": {
+      "get": {
+        "tags": ["stations"],
+        "summary": "Export Measurements Csv",
+        "description": "Export measurements for a station as CSV with streaming support.",
+        "operationId": "export_measurements_csv_api_v1_campaigns__campaign_id__stations__station_id__measurements_export_get",
+        "security": [{ "OAuth2PasswordBearer": [] }],
+        "parameters": [
+          {
+            "name": "campaign_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Campaign Id" }
+          },
+          {
+            "name": "station_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Station Id" }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                { "type": "string", "format": "date-time" },
+                { "type": "null" }
+              ],
+              "description": "Start date filter",
+              "title": "Start Date"
+            },
+            "description": "Start date filter"
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                { "type": "string", "format": "date-time" },
+                { "type": "null" }
+              ],
+              "description": "End date filter",
+              "title": "End Date"
+            },
+            "description": "End date filter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
           },
           "422": {
             "description": "Validation Error",
@@ -1405,7 +1503,6 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "additionalProperties": true,
                   "title": "Response Post Sensor And Measurement Api V1 Uploadfile Csv Campaign  Campaign Id  Station  Station Id  Sensor Post"
                 }
               }
@@ -1766,7 +1863,7 @@
           },
           "summary": { "$ref": "#/components/schemas/SummaryGetCampaign" },
           "geometry": {
-            "type": "object",
+            "anyOf": [{}, { "type": "null" }],
             "title": "Geometry"
           },
           "stations": {
@@ -1849,7 +1946,7 @@
             "title": "Start Date"
           },
           "geometry": {
-            "type": "object",
+            "anyOf": [{}, { "type": "null" }],
             "title": "Geometry"
           },
           "sensors": {
@@ -1970,7 +2067,32 @@
           },
           "summary": { "$ref": "#/components/schemas/SummaryListCampaigns" },
           "geometry": {
-            "type": "object",
+            "anyOf": [
+              {
+                "oneOf": [
+                  { "$ref": "#/components/schemas/Point" },
+                  { "$ref": "#/components/schemas/MultiPoint" },
+                  { "$ref": "#/components/schemas/LineString" },
+                  { "$ref": "#/components/schemas/MultiLineString" },
+                  { "$ref": "#/components/schemas/Polygon" },
+                  { "$ref": "#/components/schemas/MultiPolygon" },
+                  { "$ref": "#/components/schemas/GeometryCollection" }
+                ],
+                "discriminator": {
+                  "propertyName": "type",
+                  "mapping": {
+                    "GeometryCollection": "#/components/schemas/GeometryCollection",
+                    "LineString": "#/components/schemas/LineString",
+                    "MultiLineString": "#/components/schemas/MultiLineString",
+                    "MultiPoint": "#/components/schemas/MultiPoint",
+                    "MultiPolygon": "#/components/schemas/MultiPolygon",
+                    "Point": "#/components/schemas/Point",
+                    "Polygon": "#/components/schemas/Polygon"
+                  }
+                }
+              },
+              { "type": "null" }
+            ],
             "title": "Geometry"
           }
         },
@@ -2905,7 +3027,7 @@
             "title": "Start Date"
           },
           "geometry": {
-            "type": "object",
+            "anyOf": [{}, { "type": "null" }],
             "title": "Geometry"
           },
           "sensor_count": { "type": "integer", "title": "Sensor Count" },
@@ -3000,7 +3122,7 @@
             "title": "Start Date"
           },
           "geometry": {
-            "type": "object",
+            "anyOf": [{}, { "type": "null" }],
             "title": "Geometry"
           },
           "sensors": {

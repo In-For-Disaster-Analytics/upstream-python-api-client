@@ -58,7 +58,7 @@ class UploadfileCsvApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Dict[str, object]:
+    ) -> object:
         """Post Sensor And Measurement
 
         Process sensor and measurement files and store data in the database.
@@ -105,7 +105,7 @@ class UploadfileCsvApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Dict[str, object]",
+            '200': "object",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -138,7 +138,7 @@ class UploadfileCsvApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Dict[str, object]]:
+    ) -> ApiResponse[object]:
         """Post Sensor And Measurement
 
         Process sensor and measurement files and store data in the database.
@@ -185,7 +185,7 @@ class UploadfileCsvApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Dict[str, object]",
+            '200': "object",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -265,7 +265,7 @@ class UploadfileCsvApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Dict[str, object]",
+            '200': "object",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
