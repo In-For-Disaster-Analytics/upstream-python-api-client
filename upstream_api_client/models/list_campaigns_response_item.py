@@ -21,7 +21,6 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from upstream_api_client.models.list_campaigns_response_item_geometry import ListCampaignsResponseItemGeometry
 from upstream_api_client.models.location import Location
 from upstream_api_client.models.summary_list_campaigns import SummaryListCampaigns
 from typing import Optional, Set
@@ -41,7 +40,7 @@ class ListCampaignsResponseItem(BaseModel):
     end_date: Optional[datetime] = None
     allocation: Optional[StrictStr] = None
     summary: SummaryListCampaigns
-    geometry: Optional[ListCampaignsResponseItemGeometry] = None
+    geometry: Optional[Dict[str, Any]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "location", "description", "contact_name", "contact_email", "start_date", "end_date", "allocation", "summary", "geometry"]
 
     model_config = ConfigDict(
@@ -89,9 +88,6 @@ class ListCampaignsResponseItem(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of summary
         if self.summary:
             _dict['summary'] = self.summary.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of geometry
-        if self.geometry:
-            _dict['geometry'] = self.geometry.to_dict()
         # set to None if location (nullable) is None
         # and model_fields_set contains the field
         if self.location is None and "location" in self.model_fields_set:
@@ -127,11 +123,6 @@ class ListCampaignsResponseItem(BaseModel):
         if self.allocation is None and "allocation" in self.model_fields_set:
             _dict['allocation'] = None
 
-        # set to None if geometry (nullable) is None
-        # and model_fields_set contains the field
-        if self.geometry is None and "geometry" in self.model_fields_set:
-            _dict['geometry'] = None
-
         return _dict
 
     @classmethod
@@ -154,7 +145,7 @@ class ListCampaignsResponseItem(BaseModel):
             "end_date": obj.get("end_date"),
             "allocation": obj.get("allocation"),
             "summary": SummaryListCampaigns.from_dict(obj["summary"]) if obj.get("summary") is not None else None,
-            "geometry": ListCampaignsResponseItemGeometry.from_dict(obj["geometry"]) if obj.get("geometry") is not None else None
+            "geometry": obj.get("geometry")
         })
         return _obj
 

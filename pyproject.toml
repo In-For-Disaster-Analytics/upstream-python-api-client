@@ -1,6 +1,6 @@
 [project]
 name = "upstream_api_client"
-version = "0.1.5"
+version = "0.1.7"
 description = "Upstream Sensor Storage"
 authors = [
   {name = "Will Mobley",email = "wmobley@tacc.utexas.edu"},

@@ -27,11 +27,7 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {
-                  "additionalProperties": { "type": "string" },
-                  "type": "object",
-                  "title": "Response Login Api V1 Token Post"
-                }
+                "schema": { "$ref": "#/components/schemas/LoginResponse" }
               }
             }
           },
@@ -1754,76 +1750,6 @@
         "required": ["name", "allocation"],
         "title": "CampaignsIn"
       },
-      "GeometryCollection": {
-        "properties": {
-          "bbox": {
-            "anyOf": [
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 4,
-                "minItems": 4
-              },
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 6,
-                "minItems": 6
-              },
-              { "type": "null" }
-            ],
-            "title": "Bbox"
-          },
-          "type": {
-            "type": "string",
-            "const": "GeometryCollection",
-            "title": "Type"
-          },
-          "geometries": {
-            "items": {
-              "oneOf": [
-                { "$ref": "#/components/schemas/Point" },
-                { "$ref": "#/components/schemas/MultiPoint" },
-                { "$ref": "#/components/schemas/LineString" },
-                { "$ref": "#/components/schemas/MultiLineString" },
-                { "$ref": "#/components/schemas/Polygon" },
-                { "$ref": "#/components/schemas/MultiPolygon" },
-                { "$ref": "#/components/schemas/GeometryCollection" }
-              ],
-              "discriminator": {
-                "propertyName": "type",
-                "mapping": {
-                  "GeometryCollection": "#/components/schemas/GeometryCollection",
-                  "LineString": "#/components/schemas/LineString",
-                  "MultiLineString": "#/components/schemas/MultiLineString",
-                  "MultiPoint": "#/components/schemas/MultiPoint",
-                  "MultiPolygon": "#/components/schemas/MultiPolygon",
-                  "Point": "#/components/schemas/Point",
-                  "Polygon": "#/components/schemas/Polygon"
-                }
-              }
-            },
-            "type": "array",
-            "title": "Geometries"
-          }
-        },
-        "type": "object",
-        "required": ["type", "geometries"],
-        "title": "GeometryCollection",
-        "description": "GeometryCollection Model"
-      },
       "GetCampaignResponse": {
         "properties": {
           "id": { "type": "integer", "title": "Id" },
@@ -1863,8 +1789,9 @@
           },
           "summary": { "$ref": "#/components/schemas/SummaryGetCampaign" },
           "geometry": {
-            "anyOf": [{}, { "type": "null" }],
-            "title": "Geometry"
+            "type": "object",
+            "title": "Geometry",
+            "nullable": true
           },
           "stations": {
             "items": {
@@ -1946,8 +1873,9 @@
             "title": "Start Date"
           },
           "geometry": {
-            "anyOf": [{}, { "type": "null" }],
-            "title": "Geometry"
+            "type": "object",
+            "title": "Geometry",
+            "nullable": true
           },
           "sensors": {
             "anyOf": [
@@ -1974,56 +1902,6 @@
         },
         "type": "object",
         "title": "HTTPValidationError"
-      },
-      "LineString": {
-        "properties": {
-          "bbox": {
-            "anyOf": [
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 4,
-                "minItems": 4
-              },
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 6,
-                "minItems": 6
-              },
-              { "type": "null" }
-            ],
-            "title": "Bbox"
-          },
-          "type": { "type": "string", "const": "LineString", "title": "Type" },
-          "coordinates": {
-            "items": {
-              "anyOf": [
-                { "$ref": "#/components/schemas/Position2D" },
-                { "$ref": "#/components/schemas/Position3D" }
-              ]
-            },
-            "type": "array",
-            "minItems": 2,
-            "title": "Coordinates"
-          }
-        },
-        "type": "object",
-        "required": ["type", "coordinates"],
-        "title": "LineString",
-        "description": "LineString Model"
       },
       "ListCampaignsResponseItem": {
         "properties": {
@@ -2067,33 +1945,9 @@
           },
           "summary": { "$ref": "#/components/schemas/SummaryListCampaigns" },
           "geometry": {
-            "anyOf": [
-              {
-                "oneOf": [
-                  { "$ref": "#/components/schemas/Point" },
-                  { "$ref": "#/components/schemas/MultiPoint" },
-                  { "$ref": "#/components/schemas/LineString" },
-                  { "$ref": "#/components/schemas/MultiLineString" },
-                  { "$ref": "#/components/schemas/Polygon" },
-                  { "$ref": "#/components/schemas/MultiPolygon" },
-                  { "$ref": "#/components/schemas/GeometryCollection" }
-                ],
-                "discriminator": {
-                  "propertyName": "type",
-                  "mapping": {
-                    "GeometryCollection": "#/components/schemas/GeometryCollection",
-                    "LineString": "#/components/schemas/LineString",
-                    "MultiLineString": "#/components/schemas/MultiLineString",
-                    "MultiPoint": "#/components/schemas/MultiPoint",
-                    "MultiPolygon": "#/components/schemas/MultiPolygon",
-                    "Point": "#/components/schemas/Point",
-                    "Polygon": "#/components/schemas/Polygon"
-                  }
-                }
-              },
-              { "type": "null" }
-            ],
-            "title": "Geometry"
+            "type": "object",
+            "title": "Geometry",
+            "nullable": true
           }
         },
         "type": "object",
@@ -2206,6 +2060,15 @@
         "type": "object",
         "title": "Location"
       },
+      "LoginResponse": {
+        "properties": {
+          "access_token": { "type": "string", "title": "Access Token" },
+          "token_type": { "type": "string", "title": "Token Type" }
+        },
+        "type": "object",
+        "required": ["access_token", "token_type"],
+        "title": "LoginResponse"
+      },
       "MeasurementCreateResponse": {
         "properties": { "id": { "type": "integer", "title": "Id" } },
         "type": "object",
@@ -2317,172 +2180,6 @@
         "type": "object",
         "title": "MeasurementUpdate"
       },
-      "MultiLineString": {
-        "properties": {
-          "bbox": {
-            "anyOf": [
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 4,
-                "minItems": 4
-              },
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 6,
-                "minItems": 6
-              },
-              { "type": "null" }
-            ],
-            "title": "Bbox"
-          },
-          "type": {
-            "type": "string",
-            "const": "MultiLineString",
-            "title": "Type"
-          },
-          "coordinates": {
-            "items": {
-              "items": {
-                "anyOf": [
-                  { "$ref": "#/components/schemas/Position2D" },
-                  { "$ref": "#/components/schemas/Position3D" }
-                ]
-              },
-              "type": "array",
-              "minItems": 2
-            },
-            "type": "array",
-            "title": "Coordinates"
-          }
-        },
-        "type": "object",
-        "required": ["type", "coordinates"],
-        "title": "MultiLineString",
-        "description": "MultiLineString Model"
-      },
-      "MultiPoint": {
-        "properties": {
-          "bbox": {
-            "anyOf": [
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 4,
-                "minItems": 4
-              },
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 6,
-                "minItems": 6
-              },
-              { "type": "null" }
-            ],
-            "title": "Bbox"
-          },
-          "type": { "type": "string", "const": "MultiPoint", "title": "Type" },
-          "coordinates": {
-            "items": {
-              "anyOf": [
-                { "$ref": "#/components/schemas/Position2D" },
-                { "$ref": "#/components/schemas/Position3D" }
-              ]
-            },
-            "type": "array",
-            "title": "Coordinates"
-          }
-        },
-        "type": "object",
-        "required": ["type", "coordinates"],
-        "title": "MultiPoint",
-        "description": "MultiPoint Model"
-      },
-      "MultiPolygon": {
-        "properties": {
-          "bbox": {
-            "anyOf": [
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 4,
-                "minItems": 4
-              },
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 6,
-                "minItems": 6
-              },
-              { "type": "null" }
-            ],
-            "title": "Bbox"
-          },
-          "type": {
-            "type": "string",
-            "const": "MultiPolygon",
-            "title": "Type"
-          },
-          "coordinates": {
-            "items": {
-              "items": {
-                "items": {
-                  "anyOf": [
-                    { "$ref": "#/components/schemas/Position2D" },
-                    { "$ref": "#/components/schemas/Position3D" }
-                  ]
-                },
-                "type": "array",
-                "minItems": 4
-              },
-              "type": "array"
-            },
-            "type": "array",
-            "title": "Coordinates"
-          }
-        },
-        "type": "object",
-        "required": ["type", "coordinates"],
-        "title": "MultiPolygon",
-        "description": "MultiPolygon Model"
-      },
       "Point": {
         "properties": {
           "bbox": {
@@ -2528,59 +2225,6 @@
         "required": ["type", "coordinates"],
         "title": "Point",
         "description": "Point Model"
-      },
-      "Polygon": {
-        "properties": {
-          "bbox": {
-            "anyOf": [
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 4,
-                "minItems": 4
-              },
-              {
-                "prefixItems": [
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" },
-                  { "type": "number" }
-                ],
-                "type": "array",
-                "maxItems": 6,
-                "minItems": 6
-              },
-              { "type": "null" }
-            ],
-            "title": "Bbox"
-          },
-          "type": { "type": "string", "const": "Polygon", "title": "Type" },
-          "coordinates": {
-            "items": {
-              "items": {
-                "anyOf": [
-                  { "$ref": "#/components/schemas/Position2D" },
-                  { "$ref": "#/components/schemas/Position3D" }
-                ]
-              },
-              "type": "array",
-              "minItems": 4
-            },
-            "type": "array",
-            "title": "Coordinates"
-          }
-        },
-        "type": "object",
-        "required": ["type", "coordinates"],
-        "title": "Polygon",
-        "description": "Polygon Model"
       },
       "Position2D": {
         "prefixItems": [
@@ -3027,8 +2671,9 @@
             "title": "Start Date"
           },
           "geometry": {
-            "anyOf": [{}, { "type": "null" }],
-            "title": "Geometry"
+            "type": "object",
+            "title": "Geometry",
+            "nullable": true
           },
           "sensor_count": { "type": "integer", "title": "Sensor Count" },
           "sensor_types": {
@@ -3122,8 +2767,9 @@
             "title": "Start Date"
           },
           "geometry": {
-            "anyOf": [{}, { "type": "null" }],
-            "title": "Geometry"
+            "type": "object",
+            "title": "Geometry",
+            "nullable": true
           },
           "sensors": {
             "items": {

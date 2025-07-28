@@ -1,11 +1,11 @@
 {
   "projectName": "upstream-api-client",
   "packageName": "upstream_api_client",
-  "packageVersion": "0.1.0",
+  "packageVersion": "0.1.7",
   "packageUrl": "https://github.com/In-For-Disaster-Analytics/upstream-python-api-client",
   "packageAuthor": "Upstream Python Client",
   "packageAuthorEmail": "info@upstream-project.org",
-  "packageLicense": "MIT",
+  "licenseName": "MIT",
   "packageLicenseUrl": "https://github.com/In-For-Disaster-Analytics/upstream-python-api-client/blob/main/LICENSE",
   "packageDescription": "Upstream Client",
   "packageKeywords": ["upstream", "client", "python"],

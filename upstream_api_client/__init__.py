@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.7"
 
 # Define package exports
 __all__ = [
@@ -42,30 +42,22 @@ __all__ = [
     "CampaignUpdate",
     "CampaignsIn",
     "Coordinates",
-    "GeometryCollection",
-    "GeometryCollectionGeometriesInner",
     "GetCampaignResponse",
     "GetSensorResponse",
     "GetStationResponse",
     "HTTPValidationError",
-    "LineString",
-    "LineStringCoordinatesInner",
     "ListCampaignsResponseItem",
-    "ListCampaignsResponseItemGeometry",
     "ListCampaignsResponsePagination",
     "ListMeasurementsResponsePagination",
     "ListSensorsResponsePagination",
     "ListStationsResponsePagination",
     "Location",
+    "LoginResponse",
     "MeasurementCreateResponse",
     "MeasurementIn",
     "MeasurementItem",
     "MeasurementUpdate",
-    "MultiLineString",
-    "MultiPoint",
-    "MultiPolygon",
     "Point",
-    "Polygon",
     "PyTASAllocation",
     "PyTASPi",
     "PyTASProject",
@@ -116,30 +108,22 @@ from upstream_api_client.models.campaign_create_response import CampaignCreateRe
 from upstream_api_client.models.campaign_update import CampaignUpdate as CampaignUpdate
 from upstream_api_client.models.campaigns_in import CampaignsIn as CampaignsIn
 from upstream_api_client.models.coordinates import Coordinates as Coordinates
-from upstream_api_client.models.geometry_collection import GeometryCollection as GeometryCollection
-from upstream_api_client.models.geometry_collection_geometries_inner import GeometryCollectionGeometriesInner as GeometryCollectionGeometriesInner
 from upstream_api_client.models.get_campaign_response import GetCampaignResponse as GetCampaignResponse
 from upstream_api_client.models.get_sensor_response import GetSensorResponse as GetSensorResponse
 from upstream_api_client.models.get_station_response import GetStationResponse as GetStationResponse
 from upstream_api_client.models.http_validation_error import HTTPValidationError as HTTPValidationError
-from upstream_api_client.models.line_string import LineString as LineString
-from upstream_api_client.models.line_string_coordinates_inner import LineStringCoordinatesInner as LineStringCoordinatesInner
 from upstream_api_client.models.list_campaigns_response_item import ListCampaignsResponseItem as ListCampaignsResponseItem
-from upstream_api_client.models.list_campaigns_response_item_geometry import ListCampaignsResponseItemGeometry as ListCampaignsResponseItemGeometry
 from upstream_api_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination as ListCampaignsResponsePagination
 from upstream_api_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination as ListMeasurementsResponsePagination
 from upstream_api_client.models.list_sensors_response_pagination import ListSensorsResponsePagination as ListSensorsResponsePagination
 from upstream_api_client.models.list_stations_response_pagination import ListStationsResponsePagination as ListStationsResponsePagination
 from upstream_api_client.models.location import Location as Location
+from upstream_api_client.models.login_response import LoginResponse as LoginResponse
 from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse as MeasurementCreateResponse
 from upstream_api_client.models.measurement_in import MeasurementIn as MeasurementIn
 from upstream_api_client.models.measurement_item import MeasurementItem as MeasurementItem
 from upstream_api_client.models.measurement_update import MeasurementUpdate as MeasurementUpdate
-from upstream_api_client.models.multi_line_string import MultiLineString as MultiLineString
-from upstream_api_client.models.multi_point import MultiPoint as MultiPoint
-from upstream_api_client.models.multi_polygon import MultiPolygon as MultiPolygon
 from upstream_api_client.models.point import Point as Point
-from upstream_api_client.models.polygon import Polygon as Polygon
 from upstream_api_client.models.py_tas_allocation import PyTASAllocation as PyTASAllocation
 from upstream_api_client.models.py_taspi import PyTASPi as PyTASPi
 from upstream_api_client.models.py_tas_project import PyTASProject as PyTASProject

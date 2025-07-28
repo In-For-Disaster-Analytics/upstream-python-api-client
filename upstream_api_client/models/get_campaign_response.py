@@ -41,7 +41,7 @@ class GetCampaignResponse(BaseModel):
     allocation: StrictStr
     location: Optional[Location] = None
     summary: SummaryGetCampaign
-    geometry: Optional[Any] = None
+    geometry: Optional[Dict[str, Any]] = None
     stations: Optional[List[StationsListResponseItem]] = None
     __properties: ClassVar[List[str]] = ["id", "name", "description", "contact_name", "contact_email", "start_date", "end_date", "allocation", "location", "summary", "geometry", "stations"]
 
@@ -90,9 +90,6 @@ class GetCampaignResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of summary
         if self.summary:
             _dict['summary'] = self.summary.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of geometry
-        if self.geometry:
-            _dict['geometry'] = self.geometry.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in stations (list)
         _items = []
         if self.stations:
@@ -130,11 +127,6 @@ class GetCampaignResponse(BaseModel):
         if self.location is None and "location" in self.model_fields_set:
             _dict['location'] = None
 
-        # set to None if geometry (nullable) is None
-        # and model_fields_set contains the field
-        if self.geometry is None and "geometry" in self.model_fields_set:
-            _dict['geometry'] = None
-
         return _dict
 
     @classmethod
@@ -157,7 +149,7 @@ class GetCampaignResponse(BaseModel):
             "allocation": obj.get("allocation"),
             "location": Location.from_dict(obj["location"]) if obj.get("location") is not None else None,
             "summary": SummaryGetCampaign.from_dict(obj["summary"]) if obj.get("summary") is not None else None,
-            "geometry": AnyOf.from_dict(obj["geometry"]) if obj.get("geometry") is not None else None,
+            "geometry": obj.get("geometry"),
             "stations": [StationsListResponseItem.from_dict(_item) for _item in obj["stations"]] if obj.get("stations") is not None else None
         })
         return _obj

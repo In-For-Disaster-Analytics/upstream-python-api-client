@@ -35,7 +35,7 @@ class StationItemWithSummary(BaseModel):
     contact_email: Optional[StrictStr] = None
     active: Optional[StrictBool] = None
     start_date: Optional[datetime] = None
-    geometry: Optional[Any] = None
+    geometry: Optional[Dict[str, Any]] = None
     sensor_count: StrictInt
     sensor_types: List[StrictStr]
     sensor_variables: List[StrictStr]
@@ -80,9 +80,6 @@ class StationItemWithSummary(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of geometry
-        if self.geometry:
-            _dict['geometry'] = self.geometry.to_dict()
         # set to None if description (nullable) is None
         # and model_fields_set contains the field
         if self.description is None and "description" in self.model_fields_set:
@@ -108,11 +105,6 @@ class StationItemWithSummary(BaseModel):
         if self.start_date is None and "start_date" in self.model_fields_set:
             _dict['start_date'] = None
 
-        # set to None if geometry (nullable) is None
-        # and model_fields_set contains the field
-        if self.geometry is None and "geometry" in self.model_fields_set:
-            _dict['geometry'] = None
-
         return _dict
 
     @classmethod
@@ -132,7 +124,7 @@ class StationItemWithSummary(BaseModel):
             "contact_email": obj.get("contact_email"),
             "active": obj.get("active"),
             "start_date": obj.get("start_date"),
-            "geometry": AnyOf.from_dict(obj["geometry"]) if obj.get("geometry") is not None else None,
+            "geometry": obj.get("geometry"),
             "sensor_count": obj.get("sensor_count"),
             "sensor_types": obj.get("sensor_types"),
             "sensor_variables": obj.get("sensor_variables")

@@ -18,8 +18,9 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr, field_validator
-from typing import Dict, Optional
+from typing import Optional
 from typing_extensions import Annotated
+from upstream_api_client.models.login_response import LoginResponse
 
 from upstream_api_client.api_client import ApiClient, RequestSerialized
 from upstream_api_client.api_response import ApiResponse
@@ -60,7 +61,7 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Dict[str, Optional[str]]:
+    ) -> LoginResponse:
         """Login
 
 
@@ -112,7 +113,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Dict[str, Optional[str]]",
+            '200': "LoginResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -147,7 +148,7 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Dict[str, Optional[str]]]:
+    ) -> ApiResponse[LoginResponse]:
         """Login
 
 
@@ -199,7 +200,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Dict[str, Optional[str]]",
+            '200': "LoginResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -286,7 +287,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Dict[str, Optional[str]]",
+            '200': "LoginResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(

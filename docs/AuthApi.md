@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **login_api_v1_token_post**
-> Dict[str, Optional[str]] login_api_v1_token_post(username, password, grant_type=grant_type, scope=scope, client_id=client_id, client_secret=client_secret)
+> LoginResponse login_api_v1_token_post(username, password, grant_type=grant_type, scope=scope, client_id=client_id, client_secret=client_secret)
 
 Login
 
@@ -17,6 +17,7 @@ Login
 
 ```python
 import upstream_api_client
+from upstream_api_client.models.login_response import LoginResponse
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 
@@ -63,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Dict[str, Optional[str]]**
+[**LoginResponse**](LoginResponse.md)
 
 ### Authorization
 
