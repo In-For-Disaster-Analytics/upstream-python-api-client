@@ -989,6 +989,98 @@
         }
       }
     },
+    "/api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/statistics": {
+      "post": {
+        "tags": ["sensors"],
+        "summary": "Force Update Sensor Statistics",
+        "description": "Force update sensor statistics for all sensors in the station",
+        "operationId": "force_update_sensor_statistics_api_v1_campaigns__campaign_id__stations__station_id__sensors_statistics_post",
+        "security": [{ "OAuth2PasswordBearer": [] }],
+        "parameters": [
+          {
+            "name": "campaign_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Campaign Id" }
+          },
+          {
+            "name": "station_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Station Id" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForceUpdateSensorStatisticsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/{sensor_id}/statistics": {
+      "post": {
+        "tags": ["sensors"],
+        "summary": "Force Update Single Sensor Statistics",
+        "description": "Force update sensor statistics for a single sensor",
+        "operationId": "force_update_single_sensor_statistics_api_v1_campaigns__campaign_id__stations__station_id__sensors__sensor_id__statistics_post",
+        "security": [{ "OAuth2PasswordBearer": [] }],
+        "parameters": [
+          {
+            "name": "campaign_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Campaign Id" }
+          },
+          {
+            "name": "station_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Station Id" }
+          },
+          {
+            "name": "sensor_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "title": "Sensor Id" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateSensorStatisticsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/{sensor_id}/measurements": {
       "post": {
         "tags": ["measurements"],
@@ -1749,6 +1841,19 @@
         "type": "object",
         "required": ["name", "allocation"],
         "title": "CampaignsIn"
+      },
+      "ForceUpdateSensorStatisticsResponse": {
+        "properties": {
+          "updated_sensor_ids": {
+            "items": { "type": "integer" },
+            "type": "array",
+            "title": "Updated Sensor Ids"
+          },
+          "total_updated": { "type": "integer", "title": "Total Updated" }
+        },
+        "type": "object",
+        "required": ["updated_sensor_ids", "total_updated"],
+        "title": "ForceUpdateSensorStatisticsResponse"
       },
       "GetCampaignResponse": {
         "properties": {
@@ -2827,6 +2932,15 @@
         },
         "type": "object",
         "title": "SummaryListCampaigns"
+      },
+      "UpdateSensorStatisticsResponse": {
+        "properties": {
+          "sensor_id": { "type": "integer", "title": "Sensor Id" },
+          "updated": { "type": "boolean", "title": "Updated" }
+        },
+        "type": "object",
+        "required": ["sensor_id", "updated"],
+        "title": "UpdateSensorStatisticsResponse"
       },
       "ValidationError": {
         "properties": {

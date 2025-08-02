@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 # Define package exports
 __all__ = [
@@ -42,6 +42,7 @@ __all__ = [
     "CampaignUpdate",
     "CampaignsIn",
     "Coordinates",
+    "ForceUpdateSensorStatisticsResponse",
     "GetCampaignResponse",
     "GetSensorResponse",
     "GetStationResponse",
@@ -76,6 +77,7 @@ __all__ = [
     "StationsListResponseItem",
     "SummaryGetCampaign",
     "SummaryListCampaigns",
+    "UpdateSensorStatisticsResponse",
     "ValidationError",
     "ValidationErrorLocInner",
 ]
@@ -108,6 +110,7 @@ from upstream_api_client.models.campaign_create_response import CampaignCreateRe
 from upstream_api_client.models.campaign_update import CampaignUpdate as CampaignUpdate
 from upstream_api_client.models.campaigns_in import CampaignsIn as CampaignsIn
 from upstream_api_client.models.coordinates import Coordinates as Coordinates
+from upstream_api_client.models.force_update_sensor_statistics_response import ForceUpdateSensorStatisticsResponse as ForceUpdateSensorStatisticsResponse
 from upstream_api_client.models.get_campaign_response import GetCampaignResponse as GetCampaignResponse
 from upstream_api_client.models.get_sensor_response import GetSensorResponse as GetSensorResponse
 from upstream_api_client.models.get_station_response import GetStationResponse as GetStationResponse
@@ -142,5 +145,6 @@ from upstream_api_client.models.station_update import StationUpdate as StationUp
 from upstream_api_client.models.stations_list_response_item import StationsListResponseItem as StationsListResponseItem
 from upstream_api_client.models.summary_get_campaign import SummaryGetCampaign as SummaryGetCampaign
 from upstream_api_client.models.summary_list_campaigns import SummaryListCampaigns as SummaryListCampaigns
+from upstream_api_client.models.update_sensor_statistics_response import UpdateSensorStatisticsResponse as UpdateSensorStatisticsResponse
 from upstream_api_client.models.validation_error import ValidationError as ValidationError
 from upstream_api_client.models.validation_error_loc_inner import ValidationErrorLocInner as ValidationErrorLocInner

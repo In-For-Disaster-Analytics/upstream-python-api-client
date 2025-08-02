@@ -11,6 +11,7 @@ docs/CampaignUpdate.md
 docs/CampaignsApi.md
 docs/CampaignsIn.md
 docs/Coordinates.md
+docs/ForceUpdateSensorStatisticsResponse.md
 docs/GetCampaignResponse.md
 docs/GetSensorResponse.md
 docs/GetStationResponse.md
@@ -50,6 +51,7 @@ docs/StationsApi.md
 docs/StationsListResponseItem.md
 docs/SummaryGetCampaign.md
 docs/SummaryListCampaigns.md
+docs/UpdateSensorStatisticsResponse.md
 docs/UploadfileCsvApi.md
 docs/ValidationError.md
 docs/ValidationErrorLocInner.md
@@ -82,6 +84,7 @@ upstream_api_client/models/campaign_create_response.py
 upstream_api_client/models/campaign_update.py
 upstream_api_client/models/campaigns_in.py
 upstream_api_client/models/coordinates.py
+upstream_api_client/models/force_update_sensor_statistics_response.py
 upstream_api_client/models/get_campaign_response.py
 upstream_api_client/models/get_sensor_response.py
 upstream_api_client/models/get_station_response.py
@@ -116,6 +119,7 @@ upstream_api_client/models/station_update.py
 upstream_api_client/models/stations_list_response_item.py
 upstream_api_client/models/summary_get_campaign.py
 upstream_api_client/models/summary_list_campaigns.py
+upstream_api_client/models/update_sensor_statistics_response.py
 upstream_api_client/models/validation_error.py
 upstream_api_client/models/validation_error_loc_inner.py
 upstream_api_client/py.typed

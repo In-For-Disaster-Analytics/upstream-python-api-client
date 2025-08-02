@@ -21,6 +21,7 @@ from upstream_api_client.models.campaign_create_response import CampaignCreateRe
 from upstream_api_client.models.campaign_update import CampaignUpdate
 from upstream_api_client.models.campaigns_in import CampaignsIn
 from upstream_api_client.models.coordinates import Coordinates
+from upstream_api_client.models.force_update_sensor_statistics_response import ForceUpdateSensorStatisticsResponse
 from upstream_api_client.models.get_campaign_response import GetCampaignResponse
 from upstream_api_client.models.get_sensor_response import GetSensorResponse
 from upstream_api_client.models.get_station_response import GetStationResponse
@@ -55,5 +56,6 @@ from upstream_api_client.models.station_update import StationUpdate
 from upstream_api_client.models.stations_list_response_item import StationsListResponseItem
 from upstream_api_client.models.summary_get_campaign import SummaryGetCampaign
 from upstream_api_client.models.summary_list_campaigns import SummaryListCampaigns
+from upstream_api_client.models.update_sensor_statistics_response import UpdateSensorStatisticsResponse
 from upstream_api_client.models.validation_error import ValidationError
 from upstream_api_client.models.validation_error_loc_inner import ValidationErrorLocInner
