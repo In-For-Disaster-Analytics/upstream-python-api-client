@@ -1,5 +1,7 @@
-all:
-	make openapi
+.PHONY: all download openapi
+all: download openapi
+download:
+	curl -o openapi.json http://localhost:8000/openapi.json
 
 openapi:
 	docker run --rm \

@@ -1,7 +1,7 @@
 {
   "projectName": "upstream-api-client",
   "packageName": "upstream_api_client",
-  "packageVersion": "0.1.8",
+  "packageVersion": "0.1.9",
   "packageUrl": "https://github.com/In-For-Disaster-Analytics/upstream-python-api-client",
   "packageAuthor": "Upstream Python Client",
   "packageAuthorEmail": "info@upstream-project.org",
