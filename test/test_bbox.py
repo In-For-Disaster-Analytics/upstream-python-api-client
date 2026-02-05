@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.bbox import Bbox
+from upstream_api_client.models.bbox import Bbox
 
 class TestBbox(unittest.TestCase):
     """Bbox unit test stubs"""

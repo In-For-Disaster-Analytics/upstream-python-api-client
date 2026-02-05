@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.list_campaigns_response_item import ListCampaignsResponseItem
+from upstream_api_client.models.list_campaigns_response_item import ListCampaignsResponseItem
 
 class TestListCampaignsResponseItem(unittest.TestCase):
     """ListCampaignsResponseItem unit test stubs"""
@@ -38,7 +38,7 @@ class TestListCampaignsResponseItem(unittest.TestCase):
             return ListCampaignsResponseItem(
                 id = 56,
                 name = '',
-                location = upstream_client.models.location.Location(
+                location = upstream_api_client.models.location.Location(
                     bbox_west = 1.337, 
                     bbox_east = 1.337, 
                     bbox_south = 1.337, 
@@ -49,7 +49,7 @@ class TestListCampaignsResponseItem(unittest.TestCase):
                 start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 end_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 allocation = '',
-                summary = upstream_client.models.summary_list_campaigns.SummaryListCampaigns(
+                summary = upstream_api_client.models.summary_list_campaigns.SummaryListCampaigns(
                     sensor_types = [
                         ''
                         ], 
@@ -62,7 +62,7 @@ class TestListCampaignsResponseItem(unittest.TestCase):
             return ListCampaignsResponseItem(
                 id = 56,
                 name = '',
-                summary = upstream_client.models.summary_list_campaigns.SummaryListCampaigns(
+                summary = upstream_api_client.models.summary_list_campaigns.SummaryListCampaigns(
                     sensor_types = [
                         ''
                         ], 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.uploadfile_csv_api import UploadfileCsvApi
+from upstream_api_client.api.uploadfile_csv_api import UploadfileCsvApi
 
 
 class TestUploadfileCsvApi(unittest.TestCase):

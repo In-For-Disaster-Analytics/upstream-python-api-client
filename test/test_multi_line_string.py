@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.multi_line_string import MultiLineString
+from upstream_api_client.models.multi_line_string import MultiLineString
 
 class TestMultiLineString(unittest.TestCase):
     """MultiLineString unit test stubs"""

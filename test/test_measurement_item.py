@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.measurement_item import MeasurementItem
+from upstream_api_client.models.measurement_item import MeasurementItem
 
 class TestMeasurementItem(unittest.TestCase):
     """MeasurementItem unit test stubs"""
@@ -38,7 +38,7 @@ class TestMeasurementItem(unittest.TestCase):
             return MeasurementItem(
                 id = 56,
                 value = 1.337,
-                geometry = upstream_client.models.point.Point(
+                geometry = upstream_api_client.models.point.Point(
                     bbox = null, 
                     type = 'Point', 
                     coordinates = null, ),
@@ -52,7 +52,7 @@ class TestMeasurementItem(unittest.TestCase):
             return MeasurementItem(
                 id = 56,
                 value = 1.337,
-                geometry = upstream_client.models.point.Point(
+                geometry = upstream_api_client.models.point.Point(
                     bbox = null, 
                     type = 'Point', 
                     coordinates = null, ),

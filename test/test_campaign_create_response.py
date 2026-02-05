@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.campaign_create_response import CampaignCreateResponse
+from upstream_api_client.models.campaign_create_response import CampaignCreateResponse
 
 class TestCampaignCreateResponse(unittest.TestCase):
     """CampaignCreateResponse unit test stubs"""

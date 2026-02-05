@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.list_stations_response_pagination import ListStationsResponsePagination
+from upstream_api_client.models.list_stations_response_pagination import ListStationsResponsePagination
 
 class TestListStationsResponsePagination(unittest.TestCase):
     """ListStationsResponsePagination unit test stubs"""
@@ -37,7 +37,7 @@ class TestListStationsResponsePagination(unittest.TestCase):
         if include_optional:
             return ListStationsResponsePagination(
                 items = [
-                    upstream_client.models.station_item_with_summary.StationItemWithSummary(
+                    upstream_api_client.models.station_item_with_summary.StationItemWithSummary(
                         id = 56, 
                         name = '', 
                         description = '', 
@@ -62,7 +62,7 @@ class TestListStationsResponsePagination(unittest.TestCase):
         else:
             return ListStationsResponsePagination(
                 items = [
-                    upstream_client.models.station_item_with_summary.StationItemWithSummary(
+                    upstream_api_client.models.station_item_with_summary.StationItemWithSummary(
                         id = 56, 
                         name = '', 
                         description = '', 

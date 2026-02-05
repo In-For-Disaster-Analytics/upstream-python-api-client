@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.line_string import LineString
+from upstream_api_client.models.line_string import LineString
 
 class TestLineString(unittest.TestCase):
     """LineString unit test stubs"""

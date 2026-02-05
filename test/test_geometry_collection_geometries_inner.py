@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.geometry_collection_geometries_inner import GeometryCollectionGeometriesInner
+from upstream_api_client.models.geometry_collection_geometries_inner import GeometryCollectionGeometriesInner
 
 class TestGeometryCollectionGeometriesInner(unittest.TestCase):
     """GeometryCollectionGeometriesInner unit test stubs"""

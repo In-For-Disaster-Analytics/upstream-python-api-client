@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.sensor_update import SensorUpdate
+from upstream_api_client.models.sensor_update import SensorUpdate
 
 class TestSensorUpdate(unittest.TestCase):
     """SensorUpdate unit test stubs"""

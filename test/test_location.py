@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.location import Location
+from upstream_api_client.models.location import Location
 
 class TestLocation(unittest.TestCase):
     """Location unit test stubs"""

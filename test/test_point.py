@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.point import Point
+from upstream_api_client.models.point import Point
 
 class TestPoint(unittest.TestCase):
     """Point unit test stubs"""

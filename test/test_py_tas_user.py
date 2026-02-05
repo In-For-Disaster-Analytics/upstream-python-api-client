@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.py_tas_user import PyTASUser
+from upstream_api_client.models.py_tas_user import PyTASUser
 
 class TestPyTASUser(unittest.TestCase):
     """PyTASUser unit test stubs"""

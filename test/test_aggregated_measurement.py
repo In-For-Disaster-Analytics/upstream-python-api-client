@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.aggregated_measurement import AggregatedMeasurement
+from upstream_api_client.models.aggregated_measurement import AggregatedMeasurement
 
 class TestAggregatedMeasurement(unittest.TestCase):
     """AggregatedMeasurement unit test stubs"""

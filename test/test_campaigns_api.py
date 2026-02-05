@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.campaigns_api import CampaignsApi
+from upstream_api_client.api.campaigns_api import CampaignsApi
 
 
 class TestCampaignsApi(unittest.TestCase):

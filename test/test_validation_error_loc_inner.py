@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.validation_error_loc_inner import ValidationErrorLocInner
+from upstream_api_client.models.validation_error_loc_inner import ValidationErrorLocInner
 
 class TestValidationErrorLocInner(unittest.TestCase):
     """ValidationErrorLocInner unit test stubs"""

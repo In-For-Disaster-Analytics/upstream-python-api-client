@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.coordinates import Coordinates
+from upstream_api_client.models.coordinates import Coordinates
 
 class TestCoordinates(unittest.TestCase):
     """Coordinates unit test stubs"""

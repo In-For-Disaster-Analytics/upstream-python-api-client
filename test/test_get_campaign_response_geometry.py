@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.get_campaign_response_geometry import GetCampaignResponseGeometry
+from upstream_api_client.models.get_campaign_response_geometry import GetCampaignResponseGeometry
 
 class TestGetCampaignResponseGeometry(unittest.TestCase):
     """GetCampaignResponseGeometry unit test stubs"""

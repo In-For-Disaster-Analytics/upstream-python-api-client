@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.sensor_item import SensorItem
+from upstream_api_client.models.sensor_item import SensorItem
 
 class TestSensorItem(unittest.TestCase):
     """SensorItem unit test stubs"""
@@ -43,7 +43,7 @@ class TestSensorItem(unittest.TestCase):
                 postprocessscript = '',
                 units = '',
                 variablename = '',
-                statistics = upstream_client.models.sensor_statistics.SensorStatistics(
+                statistics = upstream_api_client.models.sensor_statistics.SensorStatistics(
                     max_value = 1.337, 
                     min_value = 1.337, 
                     avg_value = 1.337, 

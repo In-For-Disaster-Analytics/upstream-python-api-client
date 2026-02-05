@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.projects_api import ProjectsApi
+from upstream_api_client.api.projects_api import ProjectsApi
 
 
 class TestProjectsApi(unittest.TestCase):

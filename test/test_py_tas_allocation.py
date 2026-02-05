@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.py_tas_allocation import PyTASAllocation
+from upstream_api_client.models.py_tas_allocation import PyTASAllocation
 
 class TestPyTASAllocation(unittest.TestCase):
     """PyTASAllocation unit test stubs"""

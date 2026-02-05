@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.get_station_response import GetStationResponse
+from upstream_api_client.models.get_station_response import GetStationResponse
 
 class TestGetStationResponse(unittest.TestCase):
     """GetStationResponse unit test stubs"""
@@ -45,7 +45,7 @@ class TestGetStationResponse(unittest.TestCase):
                 start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 geometry = None,
                 sensors = [
-                    upstream_client.models.sensor_item.SensorItem(
+                    upstream_api_client.models.sensor_item.SensorItem(
                         id = 56, 
                         alias = '', 
                         description = '', 
@@ -53,7 +53,7 @@ class TestGetStationResponse(unittest.TestCase):
                         postprocessscript = '', 
                         units = '', 
                         variablename = '', 
-                        statistics = upstream_client.models.sensor_statistics.SensorStatistics(
+                        statistics = upstream_api_client.models.sensor_statistics.SensorStatistics(
                             max_value = 1.337, 
                             min_value = 1.337, 
                             avg_value = 1.337, 

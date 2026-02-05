@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.sort_field import SortField
+from upstream_api_client.models.sort_field import SortField
 
 class TestSortField(unittest.TestCase):
     """SortField unit test stubs"""

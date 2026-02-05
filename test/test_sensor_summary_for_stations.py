@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.sensor_summary_for_stations import SensorSummaryForStations
+from upstream_api_client.models.sensor_summary_for_stations import SensorSummaryForStations
 
 class TestSensorSummaryForStations(unittest.TestCase):
     """SensorSummaryForStations unit test stubs"""

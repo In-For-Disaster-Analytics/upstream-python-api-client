@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.sensor_create_response import SensorCreateResponse
+from upstream_api_client.models.sensor_create_response import SensorCreateResponse
 
 class TestSensorCreateResponse(unittest.TestCase):
     """SensorCreateResponse unit test stubs"""

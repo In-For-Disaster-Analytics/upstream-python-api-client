@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost
+from upstream_api_client.models.response_login_api_v1_token_post import ResponseLoginApiV1TokenPost
 
 class TestResponseLoginApiV1TokenPost(unittest.TestCase):
     """ResponseLoginApiV1TokenPost unit test stubs"""

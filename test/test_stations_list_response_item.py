@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.stations_list_response_item import StationsListResponseItem
+from upstream_api_client.models.stations_list_response_item import StationsListResponseItem
 
 class TestStationsListResponseItem(unittest.TestCase):
     """StationsListResponseItem unit test stubs"""
@@ -45,7 +45,7 @@ class TestStationsListResponseItem(unittest.TestCase):
                 start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 geometry = None,
                 sensors = [
-                    upstream_client.models.sensor_summary_for_stations.SensorSummaryForStations(
+                    upstream_api_client.models.sensor_summary_for_stations.SensorSummaryForStations(
                         id = 56, 
                         variable_name = '', 
                         measurement_unit = '', )

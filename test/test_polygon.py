@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.polygon import Polygon
+from upstream_api_client.models.polygon import Polygon
 
 class TestPolygon(unittest.TestCase):
     """Polygon unit test stubs"""

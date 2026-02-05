@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.measurement_create_response import MeasurementCreateResponse
+from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse
 
 class TestMeasurementCreateResponse(unittest.TestCase):
     """MeasurementCreateResponse unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.stations_api import StationsApi
+from upstream_api_client.api.stations_api import StationsApi
 
 
 class TestStationsApi(unittest.TestCase):

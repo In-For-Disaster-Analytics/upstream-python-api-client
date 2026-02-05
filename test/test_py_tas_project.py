@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.py_tas_project import PyTASProject
+from upstream_api_client.models.py_tas_project import PyTASProject
 
 class TestPyTASProject(unittest.TestCase):
     """PyTASProject unit test stubs"""
@@ -47,7 +47,7 @@ class TestPyTASProject(unittest.TestCase):
                 type_id = 56,
                 type = '',
                 pi_id = 56,
-                pi = upstream_client.models.py_taspi.PyTASPi(
+                pi = upstream_api_client.models.py_taspi.PyTASPi(
                     id = 56, 
                     username = '', 
                     email = '', 
@@ -64,7 +64,7 @@ class TestPyTASProject(unittest.TestCase):
                     home_directory = '', 
                     gid = 56, ),
                 allocations = [
-                    upstream_client.models.py_tas_allocation.PyTASAllocation(
+                    upstream_api_client.models.py_tas_allocation.PyTASAllocation(
                         id = 56, 
                         start = '', 
                         end = '', 
@@ -104,7 +104,7 @@ class TestPyTASProject(unittest.TestCase):
                 type_id = 56,
                 type = '',
                 pi_id = 56,
-                pi = upstream_client.models.py_taspi.PyTASPi(
+                pi = upstream_api_client.models.py_taspi.PyTASPi(
                     id = 56, 
                     username = '', 
                     email = '', 
@@ -121,7 +121,7 @@ class TestPyTASProject(unittest.TestCase):
                     home_directory = '', 
                     gid = 56, ),
                 allocations = [
-                    upstream_client.models.py_tas_allocation.PyTASAllocation(
+                    upstream_api_client.models.py_tas_allocation.PyTASAllocation(
                         id = 56, 
                         start = '', 
                         end = '', 

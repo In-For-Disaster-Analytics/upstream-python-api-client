@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.measurement_in import MeasurementIn
+from upstream_api_client.models.measurement_in import MeasurementIn
 
 class TestMeasurementIn(unittest.TestCase):
     """MeasurementIn unit test stubs"""

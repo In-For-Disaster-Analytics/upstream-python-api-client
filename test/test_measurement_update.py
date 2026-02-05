@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.measurement_update import MeasurementUpdate
+from upstream_api_client.models.measurement_update import MeasurementUpdate
 
 class TestMeasurementUpdate(unittest.TestCase):
     """MeasurementUpdate unit test stubs"""

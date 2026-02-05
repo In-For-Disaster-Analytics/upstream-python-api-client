@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.station_update import StationUpdate
+from upstream_api_client.models.station_update import StationUpdate
 
 class TestStationUpdate(unittest.TestCase):
     """StationUpdate unit test stubs"""

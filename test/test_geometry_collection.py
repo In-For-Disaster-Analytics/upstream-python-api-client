@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.geometry_collection import GeometryCollection
+from upstream_api_client.models.geometry_collection import GeometryCollection
 
 class TestGeometryCollection(unittest.TestCase):
     """GeometryCollection unit test stubs"""

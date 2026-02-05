@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.get_sensor_response import GetSensorResponse
+from upstream_api_client.models.get_sensor_response import GetSensorResponse
 
 class TestGetSensorResponse(unittest.TestCase):
     """GetSensorResponse unit test stubs"""
@@ -43,7 +43,7 @@ class TestGetSensorResponse(unittest.TestCase):
                 postprocessscript = '',
                 units = '',
                 variablename = '',
-                statistics = upstream_client.models.sensor_statistics.SensorStatistics(
+                statistics = upstream_api_client.models.sensor_statistics.SensorStatistics(
                     max_value = 1.337, 
                     min_value = 1.337, 
                     avg_value = 1.337, 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.summary_list_campaigns import SummaryListCampaigns
+from upstream_api_client.models.summary_list_campaigns import SummaryListCampaigns
 
 class TestSummaryListCampaigns(unittest.TestCase):
     """SummaryListCampaigns unit test stubs"""

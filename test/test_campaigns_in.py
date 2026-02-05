@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.campaigns_in import CampaignsIn
+from upstream_api_client.models.campaigns_in import CampaignsIn
 
 class TestCampaignsIn(unittest.TestCase):
     """CampaignsIn unit test stubs"""

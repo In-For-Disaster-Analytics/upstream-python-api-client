@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination
+from upstream_api_client.models.list_campaigns_response_pagination import ListCampaignsResponsePagination
 
 class TestListCampaignsResponsePagination(unittest.TestCase):
     """ListCampaignsResponsePagination unit test stubs"""
@@ -37,10 +37,10 @@ class TestListCampaignsResponsePagination(unittest.TestCase):
         if include_optional:
             return ListCampaignsResponsePagination(
                 items = [
-                    upstream_client.models.list_campaigns_response_item.ListCampaignsResponseItem(
+                    upstream_api_client.models.list_campaigns_response_item.ListCampaignsResponseItem(
                         id = 56, 
                         name = '', 
-                        location = upstream_client.models.location.Location(
+                        location = upstream_api_client.models.location.Location(
                             bbox_west = 1.337, 
                             bbox_east = 1.337, 
                             bbox_south = 1.337, 
@@ -51,7 +51,7 @@ class TestListCampaignsResponsePagination(unittest.TestCase):
                         start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         end_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         allocation = '', 
-                        summary = upstream_client.models.summary_list_campaigns.SummaryListCampaigns(
+                        summary = upstream_api_client.models.summary_list_campaigns.SummaryListCampaigns(
                             sensor_types = [
                                 ''
                                 ], 
@@ -68,10 +68,10 @@ class TestListCampaignsResponsePagination(unittest.TestCase):
         else:
             return ListCampaignsResponsePagination(
                 items = [
-                    upstream_client.models.list_campaigns_response_item.ListCampaignsResponseItem(
+                    upstream_api_client.models.list_campaigns_response_item.ListCampaignsResponseItem(
                         id = 56, 
                         name = '', 
-                        location = upstream_client.models.location.Location(
+                        location = upstream_api_client.models.location.Location(
                             bbox_west = 1.337, 
                             bbox_east = 1.337, 
                             bbox_south = 1.337, 
@@ -82,7 +82,7 @@ class TestListCampaignsResponsePagination(unittest.TestCase):
                         start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         end_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         allocation = '', 
-                        summary = upstream_client.models.summary_list_campaigns.SummaryListCampaigns(
+                        summary = upstream_api_client.models.summary_list_campaigns.SummaryListCampaigns(
                             sensor_types = [
                                 ''
                                 ], 

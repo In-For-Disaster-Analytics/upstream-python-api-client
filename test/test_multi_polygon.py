@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.multi_polygon import MultiPolygon
+from upstream_api_client.models.multi_polygon import MultiPolygon
 
 class TestMultiPolygon(unittest.TestCase):
     """MultiPolygon unit test stubs"""

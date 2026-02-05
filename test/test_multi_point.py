@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.multi_point import MultiPoint
+from upstream_api_client.models.multi_point import MultiPoint
 
 class TestMultiPoint(unittest.TestCase):
     """MultiPoint unit test stubs"""

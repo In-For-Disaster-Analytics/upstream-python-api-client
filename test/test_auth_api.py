@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.auth_api import AuthApi
+from upstream_api_client.api.auth_api import AuthApi
 
 
 class TestAuthApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.measurements_api import MeasurementsApi
+from upstream_api_client.api.measurements_api import MeasurementsApi
 
 
 class TestMeasurementsApi(unittest.TestCase):

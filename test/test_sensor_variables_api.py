@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.api.sensor_variables_api import SensorVariablesApi
+from upstream_api_client.api.sensor_variables_api import SensorVariablesApi
 
 
 class TestSensorVariablesApi(unittest.TestCase):

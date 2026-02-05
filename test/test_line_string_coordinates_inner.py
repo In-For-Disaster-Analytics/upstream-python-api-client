@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.line_string_coordinates_inner import LineStringCoordinatesInner
+from upstream_api_client.models.line_string_coordinates_inner import LineStringCoordinatesInner
 
 class TestLineStringCoordinatesInner(unittest.TestCase):
     """LineStringCoordinatesInner unit test stubs"""

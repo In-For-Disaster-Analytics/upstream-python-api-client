@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.list_sensors_response_pagination import ListSensorsResponsePagination
+from upstream_api_client.models.list_sensors_response_pagination import ListSensorsResponsePagination
 
 class TestListSensorsResponsePagination(unittest.TestCase):
     """ListSensorsResponsePagination unit test stubs"""
@@ -37,7 +37,7 @@ class TestListSensorsResponsePagination(unittest.TestCase):
         if include_optional:
             return ListSensorsResponsePagination(
                 items = [
-                    upstream_client.models.sensor_item.SensorItem(
+                    upstream_api_client.models.sensor_item.SensorItem(
                         id = 56, 
                         alias = '', 
                         description = '', 
@@ -45,7 +45,7 @@ class TestListSensorsResponsePagination(unittest.TestCase):
                         postprocessscript = '', 
                         units = '', 
                         variablename = '', 
-                        statistics = upstream_client.models.sensor_statistics.SensorStatistics(
+                        statistics = upstream_api_client.models.sensor_statistics.SensorStatistics(
                             max_value = 1.337, 
                             min_value = 1.337, 
                             avg_value = 1.337, 
@@ -68,7 +68,7 @@ class TestListSensorsResponsePagination(unittest.TestCase):
         else:
             return ListSensorsResponsePagination(
                 items = [
-                    upstream_client.models.sensor_item.SensorItem(
+                    upstream_api_client.models.sensor_item.SensorItem(
                         id = 56, 
                         alias = '', 
                         description = '', 
@@ -76,7 +76,7 @@ class TestListSensorsResponsePagination(unittest.TestCase):
                         postprocessscript = '', 
                         units = '', 
                         variablename = '', 
-                        statistics = upstream_client.models.sensor_statistics.SensorStatistics(
+                        statistics = upstream_api_client.models.sensor_statistics.SensorStatistics(
                             max_value = 1.337, 
                             min_value = 1.337, 
                             avg_value = 1.337, 

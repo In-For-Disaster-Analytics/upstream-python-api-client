@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.py_taspi import PyTASPi
+from upstream_api_client.models.py_taspi import PyTASPi
 
 class TestPyTASPi(unittest.TestCase):
     """PyTASPi unit test stubs"""

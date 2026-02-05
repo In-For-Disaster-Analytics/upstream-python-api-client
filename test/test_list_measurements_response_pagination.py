@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination
+from upstream_api_client.models.list_measurements_response_pagination import ListMeasurementsResponsePagination
 
 class TestListMeasurementsResponsePagination(unittest.TestCase):
     """ListMeasurementsResponsePagination unit test stubs"""
@@ -37,10 +37,10 @@ class TestListMeasurementsResponsePagination(unittest.TestCase):
         if include_optional:
             return ListMeasurementsResponsePagination(
                 items = [
-                    upstream_client.models.measurement_item.MeasurementItem(
+                    upstream_api_client.models.measurement_item.MeasurementItem(
                         id = 56, 
                         value = 1.337, 
-                        geometry = upstream_client.models.point.Point(
+                        geometry = upstream_api_client.models.point.Point(
                             bbox = null, 
                             type = 'Point', 
                             coordinates = null, ), 
@@ -63,10 +63,10 @@ class TestListMeasurementsResponsePagination(unittest.TestCase):
         else:
             return ListMeasurementsResponsePagination(
                 items = [
-                    upstream_client.models.measurement_item.MeasurementItem(
+                    upstream_api_client.models.measurement_item.MeasurementItem(
                         id = 56, 
                         value = 1.337, 
-                        geometry = upstream_client.models.point.Point(
+                        geometry = upstream_api_client.models.point.Point(
                             bbox = null, 
                             type = 'Point', 
                             coordinates = null, ), 

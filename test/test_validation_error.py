@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.validation_error import ValidationError
+from upstream_api_client.models.validation_error import ValidationError
 
 class TestValidationError(unittest.TestCase):
     """ValidationError unit test stubs"""

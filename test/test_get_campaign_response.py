@@ -15,7 +15,7 @@
 
 import unittest
 
-from upstream_client.models.get_campaign_response import GetCampaignResponse
+from upstream_api_client.models.get_campaign_response import GetCampaignResponse
 
 class TestGetCampaignResponse(unittest.TestCase):
     """GetCampaignResponse unit test stubs"""
@@ -44,12 +44,12 @@ class TestGetCampaignResponse(unittest.TestCase):
                 start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 end_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 allocation = '',
-                location = upstream_client.models.location.Location(
+                location = upstream_api_client.models.location.Location(
                     bbox_west = 1.337, 
                     bbox_east = 1.337, 
                     bbox_south = 1.337, 
                     bbox_north = 1.337, ),
-                summary = upstream_client.models.summary_get_campaign.SummaryGetCampaign(
+                summary = upstream_api_client.models.summary_get_campaign.SummaryGetCampaign(
                     station_count = 56, 
                     sensor_count = 56, 
                     sensor_types = [
@@ -60,7 +60,7 @@ class TestGetCampaignResponse(unittest.TestCase):
                         ], ),
                 geometry = None,
                 stations = [
-                    upstream_client.models.stations_list_response_item.StationsListResponseItem(
+                    upstream_api_client.models.stations_list_response_item.StationsListResponseItem(
                         id = 56, 
                         name = '', 
                         description = '', 
@@ -70,7 +70,7 @@ class TestGetCampaignResponse(unittest.TestCase):
                         start_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         geometry = null, 
                         sensors = [
-                            upstream_client.models.sensor_summary_for_stations.SensorSummaryForStations(
+                            upstream_api_client.models.sensor_summary_for_stations.SensorSummaryForStations(
                                 id = 56, 
                                 variable_name = '', 
                                 measurement_unit = '', )
@@ -82,7 +82,7 @@ class TestGetCampaignResponse(unittest.TestCase):
                 id = 56,
                 name = '',
                 allocation = '',
-                summary = upstream_client.models.summary_get_campaign.SummaryGetCampaign(
+                summary = upstream_api_client.models.summary_get_campaign.SummaryGetCampaign(
                     station_count = 56, 
                     sensor_count = 56, 
                     sensor_types = [
