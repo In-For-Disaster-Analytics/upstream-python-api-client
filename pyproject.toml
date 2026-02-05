@@ -1,11 +1,10 @@
 [project]
 name = "upstream_api_client"
-version = "0.1.9"
+version = "1.0.0"
 description = "Upstream Sensor Storage"
 authors = [
   {name = "Will Mobley",email = "wmobley@tacc.utexas.edu"},
 ]
-license = "MIT"
 readme = "README.md"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Upstream Sensor Storage"]
 requires-python = ">=3.9"
@@ -14,11 +13,11 @@ dependencies = [
   "urllib3 (>=2.1.0,<3.0.0)",
   "python-dateutil (>=2.8.2)",
   "pydantic (>=2)",
-  "typing-extensions (>=4.7.1)"
+  "typing-extensions (>=4.7.1)",
 ]
 
 [project.urls]
-Repository = "https://github.com/In-For-Disaster-Analytics/upstream-python-api-client"
+Repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 
 [tool.poetry]
 requires-poetry = ">=2.0"

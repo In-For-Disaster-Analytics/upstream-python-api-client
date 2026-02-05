@@ -5,8 +5,6 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_delete**](SensorsApi.md#delete_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_delete) | **DELETE** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors | Delete Sensor
-[**force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post**](SensorsApi.md#force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post) | **POST** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/statistics | Force Update Sensor Statistics
-[**force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post**](SensorsApi.md#force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post) | **POST** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/{sensor_id}/statistics | Force Update Single Sensor Statistics
 [**get_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_get**](SensorsApi.md#get_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/{sensor_id} | Get Sensor
 [**list_sensors_api_v1_campaigns_campaign_id_stations_station_id_sensors_get**](SensorsApi.md#list_sensors_api_v1_campaigns_campaign_id_stations_station_id_sensors_get) | **GET** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors | List Sensors
 [**partial_update_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_patch**](SensorsApi.md#partial_update_sensor_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_patch) | **PATCH** /api/v1/campaigns/{campaign_id}/stations/{station_id}/sensors/{sensor_id} | Partial Update Sensor
@@ -82,164 +80,6 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post**
-> ForceUpdateSensorStatisticsResponse force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post(campaign_id, station_id)
-
-Force Update Sensor Statistics
-
-Force update sensor statistics for all sensors in the station
-
-### Example
-
-* OAuth Authentication (OAuth2PasswordBearer):
-
-```python
-import upstream_api_client
-from upstream_api_client.models.force_update_sensor_statistics_response import ForceUpdateSensorStatisticsResponse
-from upstream_api_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_api_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-configuration.access_token = os.environ["ACCESS_TOKEN"]
-
-# Enter a context with an instance of the API client
-with upstream_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = upstream_api_client.SensorsApi(api_client)
-    campaign_id = 56 # int | 
-    station_id = 56 # int | 
-
-    try:
-        # Force Update Sensor Statistics
-        api_response = api_instance.force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post(campaign_id, station_id)
-        print("The response of SensorsApi->force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling SensorsApi->force_update_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_statistics_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **campaign_id** | **int**|  | 
- **station_id** | **int**|  | 
-
-### Return type
-
-[**ForceUpdateSensorStatisticsResponse**](ForceUpdateSensorStatisticsResponse.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post**
-> UpdateSensorStatisticsResponse force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post(campaign_id, station_id, sensor_id)
-
-Force Update Single Sensor Statistics
-
-Force update sensor statistics for a single sensor
-
-### Example
-
-* OAuth Authentication (OAuth2PasswordBearer):
-
-```python
-import upstream_api_client
-from upstream_api_client.models.update_sensor_statistics_response import UpdateSensorStatisticsResponse
-from upstream_api_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = upstream_api_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-configuration.access_token = os.environ["ACCESS_TOKEN"]
-
-# Enter a context with an instance of the API client
-with upstream_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = upstream_api_client.SensorsApi(api_client)
-    campaign_id = 56 # int | 
-    station_id = 56 # int | 
-    sensor_id = 56 # int | 
-
-    try:
-        # Force Update Single Sensor Statistics
-        api_response = api_instance.force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post(campaign_id, station_id, sensor_id)
-        print("The response of SensorsApi->force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling SensorsApi->force_update_single_sensor_statistics_api_v1_campaigns_campaign_id_stations_station_id_sensors_sensor_id_statistics_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **campaign_id** | **int**|  | 
- **station_id** | **int**|  | 
- **sensor_id** | **int**|  | 
-
-### Return type
-
-[**UpdateSensorStatisticsResponse**](UpdateSensorStatisticsResponse.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -334,7 +174,6 @@ List Sensors
 ```python
 import upstream_api_client
 from upstream_api_client.models.list_sensors_response_pagination import ListSensorsResponsePagination
-from upstream_api_client.models.sort_field import SortField
 from upstream_api_client.rest import ApiException
 from pprint import pprint
 

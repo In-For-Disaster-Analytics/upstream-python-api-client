@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List
-from upstream_api_client.models.validation_error_loc_inner import ValidationErrorLocInner
+from upstream_api_client.models.location1_inner import Location1Inner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class ValidationError(BaseModel):
     """
     ValidationError
     """ # noqa: E501
-    loc: List[ValidationErrorLocInner]
+    loc: List[Location1Inner]
     msg: StrictStr
     type: StrictStr
     __properties: ClassVar[List[str]] = ["loc", "msg", "type"]
@@ -91,7 +91,7 @@ class ValidationError(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "loc": [ValidationErrorLocInner.from_dict(_item) for _item in obj["loc"]] if obj.get("loc") is not None else None,
+            "loc": [Location1Inner.from_dict(_item) for _item in obj["loc"]] if obj.get("loc") is not None else None,
             "msg": obj.get("msg"),
             "type": obj.get("type")
         })

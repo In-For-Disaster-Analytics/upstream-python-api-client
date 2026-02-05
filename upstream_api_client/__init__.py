@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.1.9"
+__version__ = "1.0.0"
 
 # Define package exports
 __all__ = [
@@ -42,7 +42,6 @@ __all__ = [
     "CampaignUpdate",
     "CampaignsIn",
     "Coordinates",
-    "ForceUpdateSensorStatisticsResponse",
     "GetCampaignResponse",
     "GetSensorResponse",
     "GetStationResponse",
@@ -53,6 +52,7 @@ __all__ = [
     "ListSensorsResponsePagination",
     "ListStationsResponsePagination",
     "Location",
+    "Location1Inner",
     "LoginResponse",
     "MeasurementCreateResponse",
     "MeasurementIn",
@@ -77,9 +77,7 @@ __all__ = [
     "StationsListResponseItem",
     "SummaryGetCampaign",
     "SummaryListCampaigns",
-    "UpdateSensorStatisticsResponse",
     "ValidationError",
-    "ValidationErrorLocInner",
 ]
 
 # import apis into sdk package
@@ -110,7 +108,6 @@ from upstream_api_client.models.campaign_create_response import CampaignCreateRe
 from upstream_api_client.models.campaign_update import CampaignUpdate as CampaignUpdate
 from upstream_api_client.models.campaigns_in import CampaignsIn as CampaignsIn
 from upstream_api_client.models.coordinates import Coordinates as Coordinates
-from upstream_api_client.models.force_update_sensor_statistics_response import ForceUpdateSensorStatisticsResponse as ForceUpdateSensorStatisticsResponse
 from upstream_api_client.models.get_campaign_response import GetCampaignResponse as GetCampaignResponse
 from upstream_api_client.models.get_sensor_response import GetSensorResponse as GetSensorResponse
 from upstream_api_client.models.get_station_response import GetStationResponse as GetStationResponse
@@ -121,6 +118,7 @@ from upstream_api_client.models.list_measurements_response_pagination import Lis
 from upstream_api_client.models.list_sensors_response_pagination import ListSensorsResponsePagination as ListSensorsResponsePagination
 from upstream_api_client.models.list_stations_response_pagination import ListStationsResponsePagination as ListStationsResponsePagination
 from upstream_api_client.models.location import Location as Location
+from upstream_api_client.models.location1_inner import Location1Inner as Location1Inner
 from upstream_api_client.models.login_response import LoginResponse as LoginResponse
 from upstream_api_client.models.measurement_create_response import MeasurementCreateResponse as MeasurementCreateResponse
 from upstream_api_client.models.measurement_in import MeasurementIn as MeasurementIn
@@ -145,6 +143,5 @@ from upstream_api_client.models.station_update import StationUpdate as StationUp
 from upstream_api_client.models.stations_list_response_item import StationsListResponseItem as StationsListResponseItem
 from upstream_api_client.models.summary_get_campaign import SummaryGetCampaign as SummaryGetCampaign
 from upstream_api_client.models.summary_list_campaigns import SummaryListCampaigns as SummaryListCampaigns
-from upstream_api_client.models.update_sensor_statistics_response import UpdateSensorStatisticsResponse as UpdateSensorStatisticsResponse
 from upstream_api_client.models.validation_error import ValidationError as ValidationError
-from upstream_api_client.models.validation_error_loc_inner import ValidationErrorLocInner as ValidationErrorLocInner
+

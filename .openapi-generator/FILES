@@ -11,7 +11,6 @@ docs/CampaignUpdate.md
 docs/CampaignsApi.md
 docs/CampaignsIn.md
 docs/Coordinates.md
-docs/ForceUpdateSensorStatisticsResponse.md
 docs/GetCampaignResponse.md
 docs/GetSensorResponse.md
 docs/GetStationResponse.md
@@ -22,6 +21,7 @@ docs/ListMeasurementsResponsePagination.md
 docs/ListSensorsResponsePagination.md
 docs/ListStationsResponsePagination.md
 docs/Location.md
+docs/Location1Inner.md
 docs/LoginResponse.md
 docs/MeasurementCreateResponse.md
 docs/MeasurementIn.md
@@ -51,10 +51,8 @@ docs/StationsApi.md
 docs/StationsListResponseItem.md
 docs/SummaryGetCampaign.md
 docs/SummaryListCampaigns.md
-docs/UpdateSensorStatisticsResponse.md
 docs/UploadfileCsvApi.md
 docs/ValidationError.md
-docs/ValidationErrorLocInner.md
 git_push.sh
 pyproject.toml
 requirements.txt
@@ -62,6 +60,7 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_location1_inner.py
 tox.ini
 upstream_api_client/__init__.py
 upstream_api_client/api/__init__.py
@@ -84,7 +83,6 @@ upstream_api_client/models/campaign_create_response.py
 upstream_api_client/models/campaign_update.py
 upstream_api_client/models/campaigns_in.py
 upstream_api_client/models/coordinates.py
-upstream_api_client/models/force_update_sensor_statistics_response.py
 upstream_api_client/models/get_campaign_response.py
 upstream_api_client/models/get_sensor_response.py
 upstream_api_client/models/get_station_response.py
@@ -95,6 +93,7 @@ upstream_api_client/models/list_measurements_response_pagination.py
 upstream_api_client/models/list_sensors_response_pagination.py
 upstream_api_client/models/list_stations_response_pagination.py
 upstream_api_client/models/location.py
+upstream_api_client/models/location1_inner.py
 upstream_api_client/models/login_response.py
 upstream_api_client/models/measurement_create_response.py
 upstream_api_client/models/measurement_in.py
@@ -119,8 +118,6 @@ upstream_api_client/models/station_update.py
 upstream_api_client/models/stations_list_response_item.py
 upstream_api_client/models/summary_get_campaign.py
 upstream_api_client/models/summary_list_campaigns.py
-upstream_api_client/models/update_sensor_statistics_response.py
 upstream_api_client/models/validation_error.py
-upstream_api_client/models/validation_error_loc_inner.py
 upstream_api_client/py.typed
 upstream_api_client/rest.py
